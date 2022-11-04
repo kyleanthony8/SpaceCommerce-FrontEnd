@@ -1,7 +1,7 @@
 # myspace
 
 # Description
-A unique dashboard that allows user to view and purchase celestital objects.
+A unique dashboard that allows users to view and purchase celestital objects.
 
 # Prerequisites
 React install 
@@ -14,7 +14,7 @@ Fork and clone this repository and Change into the new directory. Run npm start 
 Danny Yu, Kyle Anthony, Connor Harris, Jacob Csonka, Andrea Alonso
 
 # How to use
-User may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. User may purchase a celestital object, sell a celestital onject, create a User Profile Account, chat with satisfied buyers, and contact staff. 
+Users may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. Users may purchase a celestital object, sell a celestital onject, create a User Profile Account, chat with satisfied buyers, and contact staff. 
 
 # License
 This project is licensed under the GNU General Public License v3.0.
