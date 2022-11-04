@@ -5,7 +5,7 @@
 **Netlify:** 
 
 ## Overview
-A unique dashboard that allows users to view and purchase celestital objects.
+Users may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. Users may purchase a celestital object, sell a celestital onject, create a User Profile Account, chat with satisfied buyers, and contact staff. 
 
 ## Team Members
 -Danny Yu
@@ -127,38 +127,6 @@ let Image = new Schema({
 | Nov 09    | Final Edits                                                                                          |          |
 | Nov 10    | Project presentation                                                                                 |          |
                                                                                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Prerequisites
-React install 
-Install Visual Studio Code from https://code.visualstudio.com/download and download Live Server v5.7.9 or the latest version of Live Server from the Extensions Tab.
-
-# Getting Started
-Fork and clone this repository and Change into the new directory. Run npm start in terminal to run the repository.
-
-# How to use
-Users may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. Users may purchase a celestital object, sell a celestital onject, create a User Profile Account, chat with satisfied buyers, and contact staff. 
 
 # License
 This project is licensed under the GNU General Public License v3.0.
