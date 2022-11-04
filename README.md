@@ -8,7 +8,7 @@
 A unique dashboard that allows users to view and purchase celestital objects.
 
 ## Team Members
-- Danny Yu
+-Danny Yu
 -Kyle Anthony
 -Connor Harris
 -Jacob Csonka
