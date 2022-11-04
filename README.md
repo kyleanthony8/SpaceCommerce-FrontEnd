@@ -8,11 +8,7 @@
 Users may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. Users may purchase a celestital object, sell a celestital onject, create a User Profile Account, chat with satisfied buyers, and contact staff. 
 
 ## Team Members
--Danny Yu
--Kyle Anthony
--Connor Harris
--Jacob Csonka
--Andrea Alonso
+Danny Yu, Kyle Anthony, Connor Harris, Jacob Csonka, and Andrea Alonso
 
 ## Data Schema
 
