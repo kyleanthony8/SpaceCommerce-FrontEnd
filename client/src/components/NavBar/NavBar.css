@@ -1,0 +1,9 @@
+.navBar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  gap: 5rem;
+  padding-right: 1rem;
+  background-color: rgba(45, 45, 45, 1);
+  color: whitesmoke;
+}
