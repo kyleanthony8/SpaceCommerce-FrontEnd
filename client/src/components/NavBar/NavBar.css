@@ -6,6 +6,12 @@ nav {
   background-color: rgba(45, 45, 45, 1);
   justify-content: space-between;
 }
+.middle {
+  position: absolute;
+}
+.right {
+  display: flex;
+}
 
 .navLinks {
   color: #e9e3d5;
