@@ -10,7 +10,7 @@ const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
       ? "https://spacecommerce.up.railway.app/"
-      : "http://localhost:3000/",
+      : "https://spacecommerce.up.railway.app/",
 });
 
 api.interceptors.request.use(

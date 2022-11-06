@@ -52,7 +52,7 @@ export const signOut = async () => {
 
 export const getAllUsers = async () => {
   try {
-    const resp = await api.get("/users/");
+    const resp = await api.get("/users");
     return resp.data;
   } catch (error) {
     throw error;
