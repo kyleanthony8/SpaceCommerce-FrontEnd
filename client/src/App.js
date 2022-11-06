@@ -3,8 +3,9 @@ import React from "react";
 import NavBar from "./components/NavBar/NavBar";
 import UserProfile from "./screens/userProfile/UserProfile.jsx";
 import SignUp from "./screens/SignUp/SignUp";
-import { Routes, Route } from "react-router-dom";
+import SignIn from  "./screens/SignIn/SignIn"
 import CreateList from "./screens/createList/CreateList";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<h1>Home</h1>} />
         <Route path="/account" element={<UserProfile />}></Route>
-        <Route path="/search" element={<SignUp />}></Route>
+        <Route path="/signIn" element={<SignIn />}></Route>
+        <Route path="/signUp" element={<SignUp />}></Route>
         <Route path="/createListing" element={<CreateList />}></Route>
       </Routes>
     </div>
