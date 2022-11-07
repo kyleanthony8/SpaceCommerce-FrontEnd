@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ItemDisplay from "../../components/ItemDisplay.jsx";
-import { getSpaceItems } from "../../services/spaceItem.js"
+import { getSpaceItems } from "../../services/spaceItem.js";
 
 const SpaceItem = (props) => {
   const [items, setItems] = useState([]);
@@ -14,21 +14,17 @@ const SpaceItem = (props) => {
   }, []);
 
   return (
-      <div>
-        {items.length > 0 ?
-          <div className="items">
+    <div>
+      {items.length > 0 ? (
+        <div className="items">
           {items.map((item, index) => {
-            return <ItemDisplay
-              item={item}
-              key={index}
-            />;
+            return <ItemDisplay item={item} key={index} />;
           })}
-          </div> 
-          :
-          <div>
-            Loading...
-          </div>}
         </div>
+      ) : (
+        <div>Loading...</div>
+      )}
+    </div>
   );
 };
 export default SpaceItem;
