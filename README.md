@@ -5,7 +5,7 @@
 **Netlify:** 
 
 ## Overview
-Users may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. Users may purchase a celestital object, sell a celestital onject, create a User Profile Account, chat with satisfied buyers, and contact staff. 
+Users may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. Users may purchase a celestital object, sell a celestital object, create a User Profile Account, chat with satisfied buyers, and contact staff. 
 
 ## Team Members
 Danny Yu, Kyle Anthony, Connor Harris, Jacob Csonka, and Andrea Alonso
@@ -116,8 +116,8 @@ let Image = new Schema({
 | :-------- | :--------------------------------------------------------------------------------------------------  | :------: |
 | Nov 03    | Project Team Building                                                                                | Complete |
 | Nov 04    | Wireframes + Final Project Approval + Create and Deploy Back-End + React dependencies + plugins      | Complete |
-| Nov 05    | Front End Page Tasking                                                                               |          |
-| Nov 06    | Front End Page Tasking                                                                               |          |
+| Nov 05    | Front End Page Tasking                                                                               | Complete |
+| Nov 06    | Front End Page Tasking                                                                               | Complete |
 | Nov 07    | 95% completion of Front End page                                                                     |          |
 | Nov 08    | CSS Style Adjustments                                                                                |          |
 | Nov 09    | Final Edits                                                                                          |          |
