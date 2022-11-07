@@ -12,12 +12,12 @@ const SpaceItem = (props) => {
     };
     fetchItems();
   }, []);
-
+console.log(items)
   return (
     <div>
       {items.length > 0 ? (
         <div className="items">
-          {items.map((item, index) => {
+          {items.slice(0, 12).map((item, index) => {
             return <ItemDisplay item={item} key={index} />;
           })}
         </div>
