@@ -1,7 +1,7 @@
 .profile {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  background: rgb(6, 49, 178);
   width: 100%;
   height: calc(100vh - 2.5rem);
 }
@@ -9,28 +9,45 @@
 .profileCore {
   display: flex;
   margin: 2rem;
-  width: 50%;
-  background: rgb(42, 42, 42);
-  padding: 1rem;
+  width: 90%;
+  height: 50%;
+  background: rgb(46, 6, 224);
+  padding: 2rem;
   gap: 1rem;
+  border-radius: 15px;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
 }
 
 .myList {
   display: flex;
   margin: 2rem;
-  width: 50%;
-  background: rgb(42, 42, 42);
+  width: 90%;
+  height: 50%;
+  background: rgb(0, 0, 0);
   padding: 1rem;
   gap: 1rem;
+  border-radius: 15px;
+  background-image: url("../userProfile/images/stars.png");
+  color: aliceblue;
 }
 
 .image {
-  background: rgb(178, 95, 6);
-  width: 30rem;
-  height: 20rem;
+  background-image: url("./images/avatar.png");
+  background-repeat: no-repeat;
+  width: 30%;
+  border-color: black;
+  border-radius: 15px;
+
 }
 
 .description {
-  background: rgb(178, 95, 6);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   width: 100%;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px;
 }
