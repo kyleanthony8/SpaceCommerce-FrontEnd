@@ -1,18 +1,19 @@
 import "./NavBar.css";
+import Logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
     <nav>
       <NavLink to="/">
-        <div className="navLinks home">Home</div>
-      </NavLink>
-      <NavLink to="/search">
-        <div className="navLinks middle">Search</div>
+        <img src={Logo} alt="hoobank" className="home" />
       </NavLink>
       <div className="right">
         <NavLink to="/createListing">
           <div className="navLinks">Create Listing</div>
+        </NavLink>
+        <NavLink to="/allListing">
+          <div className="navLinks">All Listing</div>
         </NavLink>
         <NavLink to="/account">
           <div className="navLinks">Account</div>
