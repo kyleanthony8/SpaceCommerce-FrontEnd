@@ -22,7 +22,7 @@ const Navbar = () => {
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
-            <NavLink to={`${nav.id}`}>{nav.title}</NavLink>
+            <NavLink to={`/${nav.id}`}>{nav.title}</NavLink>
           </li>
         ))}
       </ul>
