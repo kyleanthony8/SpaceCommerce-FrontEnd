@@ -1,4 +1,4 @@
-import styles from "../screens/Home/style";
+import styles from "../style";
 
 import { footerLinks, socialMedia } from "../constants";
 import Logo from "../assets/logo.png";

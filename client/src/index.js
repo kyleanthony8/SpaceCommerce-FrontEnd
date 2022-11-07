@@ -11,7 +11,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
+    <React.StrictMode>
       <App />
+      </React.StrictMode>
   </Router>
 );
 

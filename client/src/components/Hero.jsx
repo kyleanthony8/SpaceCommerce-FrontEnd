@@ -1,4 +1,4 @@
-import styles from "../screens/Home/style";
+import styles from "../style";
 import { discount, robot } from "../assets";
 
 const Hero = () => {
