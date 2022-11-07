@@ -7,7 +7,7 @@ function NavBar() {
       <NavLink to="/">
         <div className="navLinks home">Home</div>
       </NavLink>
-      <NavLink to="/search">
+      <NavLink to="/allListing">
         <div className="navLinks middle">Search</div>
       </NavLink>
       <div className="right">
