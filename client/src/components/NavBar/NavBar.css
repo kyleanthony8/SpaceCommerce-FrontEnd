@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  top: 0;
+  background-color: rgba(45, 45, 45, 1);
+  justify-content: space-between;
+}
+.middle {
+  position: absolute;
+}
+.right {
+  display: flex;
+}
+
+.navLinks {
+  color: #e9e3d5;
+  padding: 1rem 1rem 0.1rem 1rem;
+  text-transform: uppercase;
+}
+
+.home  {
+  justify-self: left;
+  align-self: left;
+}
+
+nav > a {
+  text-decoration: none;
+ }
