@@ -1,21 +1,13 @@
 import React from 'react'
 import styles from "./style";
-import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import UserProfile from "./screens/userProfile/UserProfile.jsx";
-import SignUp from "./screens/SignUp/SignUp";
-import SignIn from  "./screens/SignIn/SignIn"
-import CreateList from "./screens/createList/CreateList";
-import { Routes, Route } from "react-router-dom";
-import SpaceItem from "./screens/allList/SpaceItem.jsx";
 import { Navbar,
   Card,
   Filter,
   Footer,
-  Hero, Body } from './components'
+  Hero, Body } from '../../components'
 
 
-  const App = () => (
+  const Home = () => (
     <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
@@ -39,4 +31,4 @@ import { Navbar,
       </div>
       </div>
       );
-  export default App;
+  export default Home;
