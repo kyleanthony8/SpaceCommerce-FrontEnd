@@ -1,0 +1,36 @@
+.profile {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(6, 49, 178);
+  width: 100%;
+  height: calc(100vh - 2.5rem);
+}
+
+.profileCore {
+  display: flex;
+  margin: 2rem;
+  width: 50%;
+  background: rgb(42, 42, 42);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.myList {
+  display: flex;
+  margin: 2rem;
+  width: 50%;
+  background: rgb(42, 42, 42);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.image {
+  background: rgb(178, 95, 6);
+  width: 30rem;
+  height: 20rem;
+}
+
+.description {
+  background: rgb(178, 95, 6);
+  width: 100%;
+}
