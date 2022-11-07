@@ -1,4 +1,4 @@
-# myspace
+# MySpace
 
 **Github Repo:** 
 
