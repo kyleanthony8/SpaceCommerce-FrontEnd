@@ -1,17 +1,18 @@
-import React from 'react'
-import Home from './screens/Home/Home'
+import React from "react";
+import Home from "./screens/Home/Home";
+import NavBar from "./components/NavBar/NavBar"
 import "./App.css";
 import UserProfile from "./screens/userProfile/UserProfile.jsx";
 import SignUp from "./screens/SignUp/SignUp";
-import SignIn from  "./screens/SignIn/SignIn"
+import SignIn from "./screens/SignIn/SignIn";
 import CreateList from "./screens/createList/CreateList";
 import { Routes, Route } from "react-router-dom";
 import SpaceItem from "./screens/allList/SpaceItem.jsx";
 
 function App() {
-
   return (
     <div className="App">
+      <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/account" element={<UserProfile />}></Route>
@@ -22,5 +23,5 @@ function App() {
       </Routes>
     </div>
   );
-  }
-  export default App;
+}
+export default App;
