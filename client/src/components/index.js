@@ -7,6 +7,7 @@ import Body from './Homecards'
 import ItemDisplay from './ItemDisplay'
 import Checkout from '../screens/Checkout/checkout.jsx'
 import SpaceItem from '../screens/allList/SpaceItem.jsx'
+import Homecards from './Homecards'
 
 export {
   Navbar,
@@ -17,5 +18,6 @@ export {
   Body,
   ItemDisplay,
   Checkout,
-  SpaceItem
+  SpaceItem,
+  Homecards
 };
