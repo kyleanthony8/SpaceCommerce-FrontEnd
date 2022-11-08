@@ -1,18 +1,20 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"
-import {getSpaceItem} from "../../services/spaceItem.js"
+import { useState, useEffect, useMemo } from "react";
+import { useParams } from "react-router-dom";
+import { getSpaceItem } from "../../services/spaceItem.js";
 
 const Singlelisting = () => {
-  const [item, setItem] = useState({})
-  const { id } = useParams()
-  
+  const [item, setItem] = useState({});
+  const { id } = useParams();
+
   useEffect(() => {
     const fetchItem = async () => {
-      const response = await getSpaceItem(id)
-      setItem(response)
-    }
-    fetchItem()
-  }, [id])
+      const response = await getSpaceItem(id);
+      setItem(response);
+    };
+    fetchItem();
+  }, [id]);
+
+  if (!Object.keys(item).length) return <h1>Loading...</h1>;
 
   return (
     <div className="Display">
