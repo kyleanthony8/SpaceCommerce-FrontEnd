@@ -22,7 +22,6 @@ function CreateList() {
         price: priceRef.current.value,
         location: locationRef.current.value,
         rating: 0,
-        isBought: false,
         isHab: isHabRef.current.value,
       };
       const item = await createSpaceItem(listing);

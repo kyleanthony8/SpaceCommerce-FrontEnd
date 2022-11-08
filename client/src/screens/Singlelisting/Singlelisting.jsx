@@ -1,7 +1,6 @@
 import React from "react";
-import './ItemDisplay.css';
 
-const ItemDisplay = ({ item }) => {
+const Singlelisting = ({ item }) => {
   return (
     <div className="Display">
       <img src={item.image[0].image} />

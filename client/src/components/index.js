@@ -8,7 +8,7 @@ import ItemDisplay from './ItemDisplay'
 import Checkout from '../screens/Checkout/checkout.jsx'
 import SpaceItem from '../screens/allList/SpaceItem.jsx'
 import Homecards from './Homecards'
-import Singlelisting from '../screens/SingleListing/Singlelisting'
+import Singlelisting from '../screens/Singlelisting/Singlelisting'
 
 export {
   Navbar,
