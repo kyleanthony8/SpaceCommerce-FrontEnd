@@ -5,6 +5,7 @@ import Footer from './Footer'
 import Hero from './Hero'
 import Body from './Homecards'
 import ItemDisplay from './ItemDisplay'
+import Checkout from '../screens/Checkout/Checkout'
 import SpaceItem from '../screens/allList/SpaceItem.jsx'
 
 export {
@@ -15,5 +16,6 @@ export {
   Hero,
   Body,
   ItemDisplay,
+  Checkout,
   SpaceItem
 };

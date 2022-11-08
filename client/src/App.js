@@ -8,6 +8,7 @@ import SignIn from "./screens/SignIn/SignIn";
 import CreateList from "./screens/createList/CreateList";
 import { Routes, Route } from "react-router-dom";
 import SpaceItem from "./screens/allList/SpaceItem.jsx";
+import Checkout from "./screens/Checkout/Checkout";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/signIn" element={<SignIn />}></Route>
         <Route path="/signUp" element={<SignUp />}></Route>
         <Route path="/createListing" element={<CreateList />}></Route>
+        <Route path="/checkout" element={<Checkout/>}></Route>
       </Routes>
     </div>
   );
