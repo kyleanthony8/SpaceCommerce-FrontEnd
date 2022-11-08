@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import Logo from "../../assets/logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
-import { signOut } from "../../services/user";
+import { signOut, deleteUser } from "../../services/user";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 function NavBar() {
@@ -13,6 +13,12 @@ function NavBar() {
     dispatch({ type: 'LOGOUT' })
     navigate("/", { replace: true });
   }
+
+  const DeleteUser = () => {
+    deleteUser()
+    dispatch({ type: 'LOGOUT' })
+    navigate("/", { replace: true });
+  }
   
   return (
     <nav>
@@ -21,6 +27,8 @@ function NavBar() {
       </NavLink>
       <div className="right">
         <button onClick={SignOut}>Sign Out</button>
+
+        <button onClick={DeleteUser}>delete User</button>
         <NavLink to="/signIn">
           <div className="navLinks">Sign In</div>
         </NavLink>
@@ -33,7 +41,7 @@ function NavBar() {
         <NavLink to="/allListing">
           <div className="navLinks">All Listing</div>
         </NavLink>
-        <NavLink to="/account">
+        <NavLink to="/account/:id">
           <div className="navLinks">Account</div>
         </NavLink>
       </div>
@@ -42,3 +50,4 @@ function NavBar() {
 }
 
 export default NavBar;
+
