@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import ItemDisplay from "../../components/ItemDisplay.jsx";
 import { getSpaceItems } from "../../services/spaceItem.js";
 import { useLocation } from "react-router-dom";
+import "./allListings.css";
 
 const SpaceItem = (props) => {
   const [items, setItems] = useState([]);
@@ -63,9 +64,10 @@ const SpaceItem = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="cont">
       {toggle && (
         <input
+          className="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           type="search"
