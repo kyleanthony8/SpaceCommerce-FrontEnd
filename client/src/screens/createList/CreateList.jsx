@@ -8,7 +8,8 @@ function CreateList() {
     <div className='createList'>
       <div className='center'>
       <img src={logo}/>
-        <h1>Create Listing</h1>
+        <h1 className='header'>
+          Create Listing</h1>
         <p>Input listing information below</p>
         
         <form className="inputName">
