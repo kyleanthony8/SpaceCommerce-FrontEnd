@@ -27,6 +27,15 @@ export const createSpaceItem = async (data) => {
   }
 };
 
+export const buySpaceItem = async (id, data) => {
+  try {
+    const response = await api.put(`/spaceItems/buy/${id}`, data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const updateSpaceItem = async (id, data) => {
   try {
     const response = await api.put(`/spaceItems/id/${id}`, data);
