@@ -1,4 +1,5 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useEffect } from "react";
+import { verifyUser } from "../services/user.js";
 
 export const AuthContext = createContext();
 
@@ -17,9 +18,22 @@ export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, {
     user: null,
   });
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser();
+      if (user) {
+        dispatch({ type: "LOGIN", payload: user });
+      }
+    };
+    fetchUser();
+  }, []);
+
   console.log("AuthCon state", state);
 
-  return <AuthContext.Provider value={{...state, dispatch}}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={{ ...state, dispatch }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
-
-

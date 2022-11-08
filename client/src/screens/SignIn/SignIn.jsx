@@ -1,7 +1,7 @@
 import './SignIn.css';
-import { Link, useNavigate } from "react-router-dom";
-import { useState, useRef } from "react";
-import { signIn, signOut } from "../../services/user";
+import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
+import { signIn } from "../../services/user";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 function SignIn() {
@@ -23,7 +23,6 @@ function SignIn() {
       } else {
         dispatch({ type: 'LOGIN', payload: user })
         navigate("/", { replace: true });
-        // console.log(user)
       }
     } catch (error) {
       console.error(error);

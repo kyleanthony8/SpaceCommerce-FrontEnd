@@ -37,7 +37,7 @@ const SignUp = () => {
           password: passwordRef.current.value,
         };
         const user = await signUp(form);
-        dispatch({type: 'LOGIN', user})
+        dispatch({ type: 'LOGIN', payload: user })
         navigate("/", { replace: true });
       } catch (error) {
         console.error(error);
