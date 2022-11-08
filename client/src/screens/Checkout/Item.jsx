@@ -1,3 +1,5 @@
+import "./styles.css"
+
 const Item = (props) => (
   <div className="item-container">
     <div className="item-image">
