@@ -67,6 +67,7 @@ const SignUp = () => {
         ref={passwordRef}
         pattern="(?=.*\d)(?=.*[a-z])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}"
       />
+
       <input
         type="password"
         ref={confirmRef}
