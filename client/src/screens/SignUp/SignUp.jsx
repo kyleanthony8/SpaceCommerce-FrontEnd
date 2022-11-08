@@ -53,6 +53,10 @@ const SignUp = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="Sign Up">
+        <div className="center">
+          <h1>Sign Up</h1>
+          <p>Please complete all Information below:</p>
       <input
         type="text"
         placeholder="Enter Username"
@@ -79,8 +83,10 @@ const SignUp = () => {
         name="email"
         ref={emailRef}
       />
-      <button type="submit">Submit</button>
-    </form>
+      <button type="submit">Create Account</button>
+          </div>
+        </div>
+      </form>
   );
 };
 
