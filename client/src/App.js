@@ -1,6 +1,6 @@
-import React from "react";
+import react from "react";
 import Home from "./screens/Home/Home";
-import NavBar from "./components/NavBar/NavBar"
+import NavBar from "./components/NavBar/NavBar";
 import "./App.css";
 import UserProfile from "./screens/userProfile/UserProfile.jsx";
 import SignUp from "./screens/SignUp/SignUp";
@@ -11,6 +11,7 @@ import SpaceItem from "./screens/allList/SpaceItem.jsx";
 import Checkout from "./screens/Checkout/Checkout";
 
 function App() {
+
   return (
     <div className="App">
       <NavBar />

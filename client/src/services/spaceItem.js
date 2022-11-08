@@ -20,7 +20,7 @@ export const getSpaceItem = async (id) => {
 
 export const createSpaceItem = async (data) => {
   try {
-    const response = await api.post("/spaceItems", data);
+    const response = await api.post("/SpaceItems", data);
     return response.data;
   } catch (error) {
     throw error;

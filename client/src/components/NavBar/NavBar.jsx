@@ -1,14 +1,32 @@
 import "./NavBar.css";
 import Logo from "../../assets/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { signOut } from "../../services/user";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 function NavBar() {
+  const { dispatch } = useAuthContext()
+  let navigate = useNavigate();
+
+  const SignOut = () => {
+    signOut()
+    dispatch({ type: 'LOGOUT' })
+    navigate("/", { replace: true });
+  }
+  
   return (
     <nav>
       <NavLink to="/">
         <img src={Logo} alt="hoobank" className="home" />
       </NavLink>
       <div className="right">
+        <button onClick={SignOut}>Sign Out</button>
+        <NavLink to="/signIn">
+          <div className="navLinks">Sign In</div>
+        </NavLink>
+        <NavLink to="/SignUp">
+          <div className="navLinks">Sign Up</div>
+        </NavLink>
         <NavLink to="/createListing">
           <div className="navLinks">Create Listing</div>
         </NavLink>
