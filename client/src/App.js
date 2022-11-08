@@ -8,7 +8,7 @@ import SignIn from "./screens/SignIn/SignIn";
 import CreateList from "./screens/createList/CreateList";
 import { Routes, Route } from "react-router-dom";
 import SpaceItem from "./screens/allList/SpaceItem.jsx";
-import Checkout from "./screens/Checkout/Checkout";
+import Checkout from "./screens/Checkout/checkout.jsx";
 
 function App() {
 
