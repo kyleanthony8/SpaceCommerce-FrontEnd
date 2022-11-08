@@ -16,11 +16,13 @@ const SpaceItem = (props) => {
     const space = {};
     space.name = item.name;
     space.price = item.price;
-    space._id = item._id
+    space._id = item._id;
 
     item.image.length != 0
       ? (space.image = item.image)
-      : (space.image = [{ name: "No Image", image: "" }]);
+      : (space.image = [
+          { name: "No Image", image: "https://i.imgur.com/HHcrFpv.png" },
+        ]);
 
     return space;
   });
