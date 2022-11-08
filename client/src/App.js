@@ -19,6 +19,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/account" element={<UserProfile />}></Route>
         <Route path="/allListing" element={<SpaceItem />}></Route>
+        <Route path="/details/:id" element={<Singlelisting />}></Route>
         <Route path="/signIn" element={<SignIn />}></Route>
         <Route path="/signUp" element={<SignUp />}></Route>
         <Route path="/createListing" element={<CreateList />}></Route>
