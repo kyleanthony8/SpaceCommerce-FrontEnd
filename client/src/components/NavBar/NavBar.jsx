@@ -41,7 +41,7 @@ function NavBar() {
         <NavLink to="/allListing">
           <div className="navLinks">All Listing</div>
         </NavLink>
-        <NavLink to="/account/:id">
+        <NavLink to="/account/">
           <div className="navLinks">Account</div>
         </NavLink>
       </div>

@@ -1,9 +1,21 @@
-import React from "react";
-import styles from "../../style";
-import "./Singlelisting.css";
+import { useState, useEffect, useMemo } from "react";
+import { useParams } from "react-router-dom";
+import { getSpaceItem } from "../../services/spaceItem.js";
 
+const Singlelisting = () => {
+  const [item, setItem] = useState({});
+  const { id } = useParams();
 
-const Singlelisting = ({ item }) => {
+  useEffect(() => {
+    const fetchItem = async () => {
+      const response = await getSpaceItem(id);
+      setItem(response);
+    };
+    fetchItem();
+  }, [id]);
+
+  if (!Object.keys(item).length) return <h1>Loading...</h1>;
+
   return (
     <div className="Display">
       <Singlelisting item={item} />
