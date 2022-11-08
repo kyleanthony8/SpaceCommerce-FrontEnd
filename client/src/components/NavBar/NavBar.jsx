@@ -27,7 +27,8 @@ function NavBar() {
       </NavLink>
       <div className="right">
         <button onClick={SignOut}>Sign Out</button>
-        <button onClick={deleteUser}>Sign Out</button>
+
+        <button onClick={DeleteUser}>delete User</button>
         <NavLink to="/signIn">
           <div className="navLinks">Sign In</div>
         </NavLink>

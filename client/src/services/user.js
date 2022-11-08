@@ -92,7 +92,8 @@ export const updateUser = async (credentials, data) => {
 
 export const deleteUser = async (credentials) => {
   try {
-    const resp = await api.delete('/users/id', credentials);
+    const resp = await api.delete(`/users/id/${credentials}`);
+    localStorage.removeItem("token");
     return resp.data;
   } catch (error) {
     throw error;
