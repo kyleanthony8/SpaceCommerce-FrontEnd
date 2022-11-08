@@ -6,8 +6,8 @@ import { useLocation } from "react-router-dom";
 const SpaceItem = (props) => {
   const [items, setItems] = useState([]);
   const [number, setNumber] = useState([]);
-  const num = items.length;
   const path = useLocation();
+  let num = 0;
 
   const spaceData = items.map((item) => {
     const space = {};
@@ -21,7 +21,7 @@ const SpaceItem = (props) => {
     return space;
   });
 
-  const changeNumber = () => {
+  const changeNumber = (num) => {
     if (path.pathname === "/") {
       setNumber(12);
     } else {
@@ -32,9 +32,10 @@ const SpaceItem = (props) => {
     const fetchItems = async () => {
       const allItems = await getSpaceItems();
       setItems(allItems);
-      changeNumber();
+      num = items.length;
     };
     fetchItems();
+    changeNumber();
   }, []);
 
   return (
