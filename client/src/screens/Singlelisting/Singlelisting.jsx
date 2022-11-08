@@ -18,7 +18,6 @@ const Singlelisting = () => {
 
   return (
     <div className="Display">
-      <Singlelisting item={item} />
       <img src={item.image[0].image} />
       <h2>{item.name}</h2>
       <h3>{item.price} BTC</h3>
