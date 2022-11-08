@@ -5,7 +5,7 @@ import { getAllUsers, signUp } from "../../services/user";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 const SignUp = () => {
-  const { dispatch } = useAuthContext()
+  const { dispatch } = useAuthContext();
   const usernameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -14,7 +14,10 @@ const SignUp = () => {
 
   const checkEmail = async () => {
     const users = await getAllUsers();
-    if (users.filter((account) => account.email === emailRef.current.value).length > 0) {
+    if (
+      users.filter((account) => account.email === emailRef.current.value)
+        .length > 0
+    ) {
       return false;
     } else {
       return true;
@@ -23,11 +26,14 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-      const emailFree = await checkEmail();
-      if (!emailFree) {
-        alert("Please use a valid email account.");
-      }
-    if (passwordRef.current.value !== confirmRef.current.value || passwordRef.current.value.length < 8) {
+    const emailFree = await checkEmail();
+    if (!emailFree) {
+      alert("Please use a valid email account.");
+    }
+    if (
+      passwordRef.current.value !== confirmRef.current.value ||
+      passwordRef.current.value.length < 8
+    ) {
       alert("Please use a valid password.");
     } else {
       try {
@@ -37,7 +43,7 @@ const SignUp = () => {
           password: passwordRef.current.value,
         };
         const user = await signUp(form);
-        dispatch({ type: 'LOGIN', payload: user })
+        dispatch({ type: "LOGIN", payload: user });
         navigate("/", { replace: true });
       } catch (error) {
         console.error(error);
@@ -48,6 +54,7 @@ const SignUp = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        type="text"
         placeholder="Enter Username"
         name="username"
         ref={usernameRef}
