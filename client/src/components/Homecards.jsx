@@ -1,9 +1,13 @@
 import React from 'react'
-import ItemDisplay from './ItemDisplay'
+import SpaceItem from '../screens/allList/SpaceItem'
+import './Homecards.css'
 
 const Homecards = () => {
   return (
-    <ItemDisplay />
+    <div>
+      <SpaceItem />
+      <div className='cont'><div className='seeMore'><h2>See All Listings</h2></div></div>
+    </div>
   )
 }
 

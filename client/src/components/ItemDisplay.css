@@ -1,8 +1,6 @@
 .Display{
   color:white;
-  background-color: #33bbcf;
   margin: 10px;
-  border-radius: 6px;
   flex: 1 0 21%;
   min-width: 200px;
   min-height: 270px;
