@@ -41,7 +41,7 @@ function NavBar() {
         <NavLink to="/allListing">
           <div className="navLinks">All Listing</div>
         </NavLink>
-        <NavLink to="/account">
+        <NavLink to="/account/:id">
           <div className="navLinks">Account</div>
         </NavLink>
       </div>
@@ -50,3 +50,4 @@ function NavBar() {
 }
 
 export default NavBar;
+
