@@ -57,7 +57,7 @@ body {
 }
 
 .checkout {
-  height: 430px;
+  height: 600px;
   background: #2f2c33;
   color: white;
 }
@@ -123,6 +123,21 @@ input[type=month]::-webkit-inner-spin-button {
 input[type=month]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
     display: none;
+}
+
+.apple-pay-btn {
+  background-color: black;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.crypto-btn {
+  background-color: blue;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
 }
 
 .checkout-btn {
