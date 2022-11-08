@@ -2,8 +2,10 @@ import "./SignUp.css";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllUsers, signUp } from "../../services/user";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 const SignUp = () => {
+  const { dispatch } = useAuthContext()
   const usernameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -34,7 +36,8 @@ const SignUp = () => {
           email: emailRef.current.value,
           password: passwordRef.current.value,
         };
-        await signUp(form);
+        const user = await signUp(form);
+        dispatch({type: 'LOGIN', user})
         navigate("/", { replace: true });
       } catch (error) {
         console.error(error);
