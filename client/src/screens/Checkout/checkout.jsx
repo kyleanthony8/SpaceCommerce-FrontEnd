@@ -7,7 +7,7 @@ const Checkout = (props) => {
   return (
     <div className="app-container">
       <div className="product-col">
-        <Item name="Jupiter" price="300,000,000 BTC" img="http://ecx.images-amazon.com/images/I/61%2BABMMN5zL._SL1500_.jpg" />
+        <Item name={props.name} price={props.price} img={props.img} />
       </div>
       <div className="col no-gutters">
         <PaymentCheckout />
