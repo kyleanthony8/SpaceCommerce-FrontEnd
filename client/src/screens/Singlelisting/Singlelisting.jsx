@@ -1,6 +1,19 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom"
+import {getSpaceItem} from "../../services/spaceItem.js"
 
-const Singlelisting = ({ item }) => {
+const Singlelisting = () => {
+  const [item, setItem] = useState({})
+  const { id } = useParams()
+  
+  useEffect(() => {
+    const fetchItem = async () => {
+      const response = await getSpaceItem(id)
+      setItem(response)
+    }
+    fetchItem()
+  }, [id])
+
   return (
     <div className="Display">
       <img src={item.image[0].image} />
