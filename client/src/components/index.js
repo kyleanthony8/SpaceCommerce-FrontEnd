@@ -3,7 +3,10 @@ import Card from './Card'
 import Filter from './Filter'
 import Footer from './Footer'
 import Hero from './Hero'
-import Body from './Body'
+import Body from './Homecards'
+import ItemDisplay from './ItemDisplay'
+import Checkout from '../screens/Checkout/Checkout'
+import SpaceItem from '../screens/allList/SpaceItem.jsx'
 
 export {
   Navbar,
@@ -11,5 +14,8 @@ export {
   Filter,
   Footer,
   Hero,
-  Body
+  Body,
+  ItemDisplay,
+  Checkout,
+  SpaceItem
 };

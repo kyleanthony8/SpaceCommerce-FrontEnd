@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../style";
-import { Navbar, Card, Filter, Footer, Hero, Body } from "../../components";
+import { Navbar, Card, Filter, Footer, Hero, SpaceItem } from "../../components";
 
 const Home = () => (
   <div className="bg-primary w-full overflow-hidden">
@@ -18,8 +18,7 @@ const Home = () => (
 
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        <Filter />
-        <Body />
+        <SpaceItem />
         <p className="heading2" Body goes here />
         <Footer />
       </div>
