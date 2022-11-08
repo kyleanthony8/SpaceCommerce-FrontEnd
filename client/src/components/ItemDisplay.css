@@ -8,6 +8,8 @@
   max-height: 270px;
   border-radius: 16px;
   background: #2f2c33;
+  border-color: #33bbcf;
+  border-width: 1px;
 }
 
 .Display:hover{
