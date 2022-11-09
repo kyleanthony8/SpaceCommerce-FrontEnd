@@ -2,7 +2,7 @@ import "./styles.css";
 import Button from "./Button";
 import Input from "./Input";
 
-const PaymentCheckout = (props) => (
+const PaymentCheckout = () => (
   <div className="checkout">
     <button className="apple-pay-btn" onClick={event => window.location.href="https://www.apple.com/apple-pay/"}>APPLE PAY</button>
     <br />
