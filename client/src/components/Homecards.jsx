@@ -2,18 +2,17 @@ import React from "react";
 import SpaceItem from "../screens/allList/SpaceItem";
 import "./Homecards.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import styles from "../style";
 
 const Homecards = () => {
-  
   return (
     <div>
       <SpaceItem />
       <NavLink to="/allListing">
-        <div className="cont">
-          <div className="seeMore">
-            <h2>See All Listings</h2>
-          </div>
-        </div>
+      <div className={`ss:hidden ${styles.flexCenter}`}>
+        
+      </div>
+        <span className="text-gradient">See More Listings</span>
       </NavLink>
     </div>
   );
