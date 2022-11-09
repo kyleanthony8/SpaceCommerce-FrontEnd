@@ -1,3 +1,4 @@
+
 .cont{
   display:flex;
   justify-content: center;
@@ -5,17 +6,20 @@
   flex-direction: column-reverse;
 }
 
-.search{
-  color:white;
-  background: rgba(51, 187, 207, 0.84);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+.search {
+  font-size: larger;
+  width: 30%;
+  color: white;
+  background: #0e2c51;
+  border-radius: 2rem;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
   backdrop-filter: blur(10.2px);
   -webkit-backdrop-filter: blur(10.2px);
-  border: 1px solid rgba(51, 187, 207, 0.73);
-  max-width: 200px;
-  min-width: 200px;
-  margin:10px;
-  padding:5px;
+  margin: 10px;
+  padding: 2rem;
   order: 1;
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }

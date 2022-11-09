@@ -7,6 +7,7 @@ import {
   Footer,
   Hero,
   Homecards,
+  Clients,
 } from "../../components";
 
 const Home = () => (
@@ -24,6 +25,7 @@ const Home = () => (
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <Homecards />
+        <Clients />
         <Footer />
       </div>
     </div>

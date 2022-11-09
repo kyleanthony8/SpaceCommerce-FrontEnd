@@ -66,6 +66,7 @@ const SpaceItem = () => {
       {toggle && (
         <input
           className="search"
+          placeholder="Search..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           type="search"
