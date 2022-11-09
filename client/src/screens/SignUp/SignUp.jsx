@@ -53,41 +53,41 @@ const SignUp = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="Sign Up">
-        <div className="center">
+      <div className="sign-up">
+        <div className="sign-up-center">
           <h1>Sign Up</h1>
           <p>Please complete all Information below:</p>
-      <input
-        type="text"
-        placeholder="Enter Username"
-        name="username"
-        ref={usernameRef}
-      />
-      <input
-        type="password"
-        minLength="8"
-        placeholder="Enter Password"
-        name="password"
-        ref={passwordRef}
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}"
-      />
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="username"
+            ref={usernameRef}
+          />
+          <input
+            type="password"
+            minLength="8"
+            placeholder="Enter Password"
+            name="password"
+            ref={passwordRef}
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}"
+          />
 
-      <input
-        type="password"
-        ref={confirmRef}
-        name="passwordConfirm"
-        placeholder="Confirm Password"
-      />
-      <input
-        type="email"
-        placeholder="Enter Email"
-        name="email"
-        ref={emailRef}
-      />
-      <button type="submit">Create Account</button>
-          </div>
+          <input
+            type="password"
+            ref={confirmRef}
+            name="passwordConfirm"
+            placeholder="Confirm Password"
+          />
+          <input
+            type="email"
+            placeholder="Enter Email"
+            name="email"
+            ref={emailRef}
+          />
+          <button type="submit">Create Account</button>
         </div>
-      </form>
+      </div>
+    </form>
   );
 };
 

@@ -1,26 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
 
-
-
-
-.signUp {
+.sign-up {
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  background:#11101d;
   width: 100%;
   height: 100vh;
-  background-color: rgba(45, 45, 45, 0.9);
 }
 
-.signUpCenter {
+.sign-up-center {
+  margin: 5% auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 60vw;
   height: 80vh;
-  border-radius: 10%;
-  background-color: rgba(45, 45, 45, 1);
-  color: whitesmoke;
+  background: #2f2c33;
+  color: white;
 }
