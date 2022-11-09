@@ -50,8 +50,8 @@ function CreateList() {
             name="name"
             placeholder=" Planet-X"
           />
-          <select ref={typeRef}>
-          <option value="Continental">Continental</option>
+          <select classname="select" ref={typeRef}>
+          <option classname="dropdown" value="Continental">Continental</option>
             <option value="Ocean">Ocean</option>
             <option value="Barren">Barren</option>
             <option value="Tropical">Tropical</option>
