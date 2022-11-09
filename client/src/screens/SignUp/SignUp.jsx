@@ -1,5 +1,5 @@
 import "./SignUp.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllUsers, signUp } from "../../services/user";
 import { useAuthContext } from "../../hooks/useAuthContext";
@@ -12,6 +12,16 @@ const SignUp = () => {
   const passwordRef = useRef();
   const confirmRef = useRef();
   let navigate = useNavigate();
+  const { user } = useAuthContext();
+  
+  useEffect(() => {
+    const checkSignIn = () => {
+      if (user) {
+        navigate("/", { replace: true });
+      }
+    };
+    checkSignIn();
+  }, [user]);
 
   const checkEmail = async () => {
     const users = await getAllUsers();

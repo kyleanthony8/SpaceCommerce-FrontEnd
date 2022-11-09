@@ -4,6 +4,7 @@ import { navLinks } from "../constants";
 import Logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
 
+
 const Navbar = () => {
   const [active, setActive] = useState("Home");
 
@@ -11,7 +12,7 @@ const Navbar = () => {
     <nav className="w-full flex py-6 justify-between items-center navbar">
       <NavLink to="/">
         <img src={Logo} alt="hoobank" className="w-[124px] h-[124px]" />
-        </NavLink>
+      </NavLink>
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (

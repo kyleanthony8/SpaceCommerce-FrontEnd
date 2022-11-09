@@ -17,6 +17,9 @@ nav {
   text-transform: uppercase;
 }
 
+.more {
+  top: 10rem
+}
 .home  {
   height: 5rem;
   width: 5rem;

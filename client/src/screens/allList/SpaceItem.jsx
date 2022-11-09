@@ -4,7 +4,7 @@ import { getSpaceItems } from "../../services/spaceItem.js";
 import { useLocation } from "react-router-dom";
 import "./allListings.css";
 
-const SpaceItem = (props) => {
+const SpaceItem = () => {
   const [items, setItems] = useState([]);
   const [number, setNumber] = useState([]);
   const [query, setQuery] = useState("");
@@ -21,9 +21,7 @@ const SpaceItem = (props) => {
 
     item.image.length != 0
       ? (space.image = item.image)
-      : (space.image = [
-          { name: "No Image", image: "https://i.imgur.com/HHcrFpv.png" },
-        ]);
+      : (space.image = ["636bb1f197753db232ec31c5"]);
 
     return space;
   });

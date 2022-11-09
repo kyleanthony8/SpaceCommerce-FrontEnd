@@ -27,6 +27,7 @@ export const createSpaceItem = async (data) => {
   }
 };
 
+// Not Tested
 export const buySpaceItem = async (id, data) => {
   try {
     const response = await api.put(`/spaceItems/buy/${id}`, data);
@@ -36,6 +37,7 @@ export const buySpaceItem = async (id, data) => {
   }
 };
 
+// For Dev purposes
 export const updateSpaceItem = async (id, data) => {
   try {
     const response = await api.put(`/spaceItems/id/${id}`, data);
@@ -45,6 +47,7 @@ export const updateSpaceItem = async (id, data) => {
   }
 };
 
+// For Dev purposes
 export const deleteSpaceItem = async (id) => {
   try {
     const response = await api.delete(`/spaceItems/id/${id}`);
