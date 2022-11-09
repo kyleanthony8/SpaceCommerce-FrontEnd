@@ -1,59 +1,82 @@
-import './CreateList.css';
-import React from 'react';
-import '../createList/images/starburst.png'
-import logo from '../createList/images/logo.png'
+import "./CreateList.css";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { createSpaceItem } from "../../services/spaceItem.js";
+import "../createList/images/logo.png"
 
 function CreateList() {
-  return (
-    <div className='createList'>
-      <div className='center'>
-      <img src={logo}/>
-        <h1 className='header'>
-          Create Listing</h1>
-        <p>Input listing information below</p>
-        
-        <form className="inputName">
-        <label>
-        Name:
-        <input type="text" name="name" placeholder=" Planet-X" />
-        </label>
-        </form>
-      <form className="inputType">
-        <label>
-        Type:
-        <input type="text" name="name" placeholder=" Gas Giant" />
-        </label>
-        </form>
-      <form className="inputSize">
-        <label>
-        Size:
-        <input type="text" name="name" placeholder=" Large"/>
-        </label>
-        </form>
-      <form>
-        <label className="inputPrice">
-        Price:
-        <input type="text" name="name" placeholder=" 1,000,000" />
-        </label>
-        </form>
-      <form className="inputLocation">
-        <label>
-        Location:
-        <input type="text" name="name" placeholder=" Milky Way" />
-        </label>
-        </form>
-        <div classname="uploadImage">
-      <button className="uploadButton">
-          Upload Image:
-          </button>
-          </div>
-        <form classname="chooseFile">
-        <input type="file" name="name" />
-        </form>
-        <button className="createButton">Save Listing</button>
-        
-      </div>
+  const nameRef = useRef();
+  const typeRef = useRef();
+  const sizeRef = useRef();
+  const priceRef = useRef();
+  const locationRef = useRef();
+  const isHabRef = useRef();
+  let navigate = useNavigate();
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const listing = {
+        name: nameRef.current.value,
+        type: typeRef.current.value,
+        size: sizeRef.current.value,
+        price: priceRef.current.value,
+        location: locationRef.current.value,
+        rating: 0,
+        isBought: false,
+        isHab: isHabRef.current.value,
+      };
+      const item = await createSpaceItem(listing);
+      console.log(item);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  return (
+    <div className="createList">
+      <div className="center">
+        <h1 className="header">Create Listing</h1>
+        <p>Input listing information below</p>
+        <form className="inputField" onSubmit={handleSubmit}>
+            <input 
+              ref={nameRef}
+              type="text"
+              name="name"
+              placeholder=" Planet-X"
+            />
+            <input
+              ref={typeRef}
+              type="text"
+              name="name"
+              placeholder=" Gas Giant"
+            />
+            <input ref={sizeRef} type="text" name="name" placeholder=" Large" />
+            <input
+              ref={priceRef}
+              type="number"
+              name="name"
+              placeholder=" 1,000,000"
+            />
+            <input
+              ref={locationRef}
+              type="text"
+              name="name"
+              placeholder=" Milky Way"
+            />
+            <input
+              ref={isHabRef}
+              type="text"
+              name="name"
+              placeholder=" false"
+            />
+          {/* <input
+            type="text"
+            name="name"
+            placeholder=" URL Link"
+          /> */}
+          <button id="createListing">Submit Listing</button>
+        </form>
+      </div>
     </div>
   );
 }

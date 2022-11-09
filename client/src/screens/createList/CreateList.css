@@ -1,12 +1,12 @@
 .createList {
   position: fixed;
   display: flex;
-  justify-content: center;
-  align-items: center;
+ justify-content: center;
+ align-items: center;
   width: 100%;
   height: 100vh;
   background-color:black;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 img {
@@ -17,100 +17,88 @@ img {
   opacity: 0.9;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
   width: 50%;
   height: 80vh;
-  border-radius: 10%;
   background-color: rgba(45, 45, 45, 1);
   color: rgb(255, 255, 255);
+  border:2px;
+  border-color: aqua;
+  border-style: solid;
+  border-radius: 3px;
 }
 
 .header {
   font-size:x-large;
   color:#fff;
+  padding-top: 30px;
 }
 
 .createButton {
-  display: inline-block;
-  outline: none;
+  background: linear-gradient(0deg, grey, grey);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  margin-top: 50px;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1.5px;
   cursor: pointer;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  padding: 2px 16px;
-  height: 32px;
-  min-width: 60px;
-  min-height: 32px;
-  border: none;
-  color: #fff;
-  background-color: #4f545c;
-  transition: background-color .17s ease,color .17s ease;
 }
 
-.inputName {
-  font-size: 14px;
-  border-radius: 6px;
-  line-height: 1.5;
-  padding: 5px 10px;
-  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
-  border: 2px solid #dee1e2;
-  color: rgb(14, 14, 16);
-  background: #dee1e2;
-  display: block;
-  height: 36px;
+
+.inputField {
+  display:flex;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
 }
 
-.inputType {
-  font-size: 14px;
-  border-radius: 6px;
-  line-height: 1.5;
-  padding: 5px 10px;
-  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
-  border: 2px solid #dee1e2;
-  color: rgb(14, 14, 16);
-  background: #dee1e2;
-  display: block;
-  height: 36px;
+.inputField label{
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #78757c;
 }
 
-.inputSize {
-  font-size: 14px;
-  border-radius: 6px;
-  line-height: 1.5;
+.inputField input {
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
   padding: 5px 10px;
-  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
-  border: 2px solid #dee1e2;
-  color: rgb(14, 14, 16);
-  background: #dee1e2;
-  display: block;
-  height: 36px;
+  color: white;
+  letter-spacing: 0px;
+  font-size: 14px;
+  background: 0;
+  border: 0;
+  border:#78757c;
+  border-style: solid;
 }
 
-.inputPrice {
-  font-size: 14px;
-  border-radius: 6px;
-  line-height: 1.5;
-  padding: 5px 10px;
-  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
-  border: 2px solid #dee1e2;
-  color: rgb(14, 14, 16);
-  background: #dee1e2;
-  display: block;
-  height: 36px;
+.inputField input:focus {
+  outline: 0;
 }
 
-.inputLocation {
-  font-size: 14px;
-  border-radius: 6px;
-  line-height: 1.5;
-  padding: 5px 10px;
-  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
-  border: 2px solid #dee1e2;
-  color: rgb(14, 14, 16);
-  background: #dee1e2;
-  display: block;
-  height: 36px;
+.inputField-field {
+  border: 1px solid #78757c;
+  border-radius: 5px;
+  position: relative;
+}
+
+.inputField img {
+  width: 25px;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  margin-right: 5px;
 }
 
