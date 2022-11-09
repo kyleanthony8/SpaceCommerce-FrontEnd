@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSpaceItem } from "../../services/spaceItem.js";
-import { NavLink, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "./Singlelisting.css";
 
 const Singlelisting = () => {

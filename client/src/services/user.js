@@ -34,7 +34,7 @@ export const verifyUser = async () => {
 
 export const changePassword = async (credentials, data) => {
   try {
-    const resp = await api.put(`/changePassword/id/${credentials}`, data);
+    const resp = await api.put(`/users/changePassword/${credentials}`, data);
     return resp.data;
   } catch (error) {
     throw error;

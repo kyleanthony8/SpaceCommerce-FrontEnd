@@ -2,7 +2,7 @@ import "./styles.css";
 import Button from "./Button";
 import Input from "./Input";
 
-const PaymentCheckout = () => (
+const PaymentCheckout = ({id}) => (
   <div className="checkout">
     <button className="apple-pay-btn" onClick={event => window.location.href="https://www.apple.com/apple-pay/"}>APPLE PAY</button>
     <br />
@@ -21,7 +21,7 @@ const PaymentCheckout = () => (
           <Input label="CVV" type="number" name="cvv" />
         </div>
       </div>
-      <Button text="PLACE YOUR ORDER" />
+    <Button text="PLACE YOUR ORDER" id={id} />
   </div>
 );
  

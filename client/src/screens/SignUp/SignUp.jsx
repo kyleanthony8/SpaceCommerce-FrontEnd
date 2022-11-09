@@ -11,9 +11,10 @@ const SignUp = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const confirmRef = useRef();
+  const imgRef = useRef();
   let navigate = useNavigate();
   const { user } = useAuthContext();
-  
+
   useEffect(() => {
     const checkSignIn = () => {
       if (user) {
@@ -52,6 +53,7 @@ const SignUp = () => {
           username: usernameRef.current.value,
           email: emailRef.current.value,
           password: passwordRef.current.value,
+          avatar: !imgRef.current.value ? "https://i.imgur.com/WxNkK7J.png" : imgRef.current.value
         };
         const user = await signUp(form);
         dispatch({ type: "LOGIN", payload: user });
@@ -67,7 +69,9 @@ const SignUp = () => {
       <div className="sign-up">
         <div className="sign-up-center">
           <h1 className="sign-up-title">Sign Up</h1>
-          <p className="sign-up-description">Please complete all Information below:</p>
+          <p className="sign-up-description">
+            Please complete all Information below:
+          </p>
           <input
             type="text"
             placeholder="Enter Username"
@@ -95,8 +99,19 @@ const SignUp = () => {
             name="email"
             ref={emailRef}
           />
-          <br/>
-          <button className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`} type="submit">Create Account</button>
+          <input
+            type="text"
+            placeholder="Enter Avatar Image URL"
+            name="url"
+            ref={imgRef}
+          />
+          <br />
+          <button
+            className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}
+            type="submit"
+          >
+            Create Account
+          </button>
         </div>
       </div>
     </form>

@@ -9,6 +9,7 @@ import CreateList from "./screens/createList/CreateList";
 import { Routes, Route } from "react-router-dom";
 import SpaceItem from "./screens/allList/SpaceItem.jsx";
 import Checkout from "./screens/Checkout/checkout.jsx";
+import ChangePW from "./screens/ChangePW/ChangePW";
 import { Singlelisting } from "./components";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />}></Route>
         <Route path="/createListing" element={<CreateList />}></Route>
         <Route path="/checkout" element={<Checkout />}></Route>
+        <Route path="/changePassword" element={<ChangePW />}></Route>
       </Routes>
     </div>
   );
