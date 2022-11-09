@@ -19,7 +19,7 @@ function SignIn() {
       }
     };
     checkSignIn();
-  }, [user]);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,9 +29,12 @@ function SignIn() {
         password: passwordRef.current.value,
       };
       const user = await signIn(form);
-      if (user.username === "Error") {
-        alert("Invalid");
+
+      if (user.name === "AxiosError") {
+        alert("Invalid Username or password");
+
       } else {
+        console.log(user)
         dispatch({ type: "LOGIN", payload: user });
         navigate("/", { replace: true });
       }
