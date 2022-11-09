@@ -3,13 +3,13 @@ import { useEffect } from "react";
 import { useNavigate} from "react-router-dom";
 import { deleteUser } from "../../services/user";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import ItemDisplay from "../../components/ItemDisplay"
 
 function UserProfile() {
   const navigate = useNavigate();
   const { user } = useAuthContext();
   const { dispatch } = useAuthContext();
 
-  console.log(user)
   const DeleteUser = async () => {
     await deleteUser();
     dispatch({ type: "LOGOUT" });
@@ -32,6 +32,7 @@ function UserProfile() {
 
   if (!user) return <h1>Loading...</h1>;
 
+  // console.log(user.listing)
   return (
     <div className="profile">
       <div className="profileCore">
@@ -44,7 +45,16 @@ function UserProfile() {
         <button onClick={changePassword} className="changePass">Change Password</button>
         <button onClick={DeleteUser} className="changePass">Delete Profile</button>
       </div>
-      <div className="myList">My List</div>
+      {user.listing.length > 0 ? (
+        <div className="myList">
+          {user.listing.map((item, index) => {
+            console.log(item.image)
+            return <ItemDisplay item={item} key={index} />;
+          })}
+        </div>
+      ) : (
+        <div>Loading...</div>
+      )}
     </div>
   );
 }
