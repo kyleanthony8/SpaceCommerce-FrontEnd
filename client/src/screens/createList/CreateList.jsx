@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { createSpaceItem } from "../../services/spaceItem.js";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
-// TO DO LATER
-// If image doesnt exist, use OBJECT ID OF UNDER CONSTRUCTION IMAGE FROM DATABSE WHICH STILL NEED TO BE ADDED
 function CreateList() {
   const nameRef = useRef();
   const typeRef = useRef();
@@ -28,7 +26,7 @@ function CreateList() {
           size: sizeRef.current.value,
           price: priceRef.current.value,
           location: locationRef.current.value,
-          image: [{ name: "No Image", image: "https://i.imgur.com/HHcrFpv.png" }],
+          image: ["636bb1f197753db232ec31c5"],
           rating: 0,
           isHab: isHabRef.current.value,
         };

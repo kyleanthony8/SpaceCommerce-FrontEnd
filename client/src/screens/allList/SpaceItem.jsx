@@ -21,9 +21,7 @@ const SpaceItem = () => {
 
     item.image.length != 0
       ? (space.image = item.image)
-      : (space.image = [
-          { name: "No Image", image: "https://i.imgur.com/HHcrFpv.png" },
-        ]);
+      : (space.image = ["636bb1f197753db232ec31c5"]);
 
     return space;
   });
