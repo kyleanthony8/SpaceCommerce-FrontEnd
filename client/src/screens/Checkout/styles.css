@@ -28,19 +28,21 @@ body {
 
 .item-image-src{
   width: 25rem !important;
-  height: 25rem !important;
+  height: 22rem !important;
 }
+
 
 .item-image {
   position: absolute;
   z-index: 1;
+  padding-left: 1rem;
 }
 
 .item-details {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 2.5px;
+  bottom: 0.15625rem;
   margin-bottom: 0.9375rem;
   padding-left: 5.625rem;
   /* margin-left: 20px; */
@@ -171,9 +173,5 @@ input[type=month]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 48rem) {
-  .app-container {
-    width: 100%;
-  }
-}
+
 
