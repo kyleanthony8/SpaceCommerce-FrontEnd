@@ -4,7 +4,7 @@ import { getSpaceItems } from "../../services/spaceItem.js";
 import { useLocation } from "react-router-dom";
 import "./allListings.css";
 
-const SpaceItem = (props) => {
+const SpaceItem = () => {
   const [items, setItems] = useState([]);
   const [number, setNumber] = useState([]);
   const [query, setQuery] = useState("");

@@ -1,6 +1,7 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSpaceItem } from "../../services/spaceItem.js";
+import { NavLink } from "react-router-dom";
 
 const Singlelisting = () => {
   const [item, setItem] = useState({});
@@ -24,7 +25,9 @@ const Singlelisting = () => {
       <p>{item.location}</p>
       <h1>TEST TEST</h1>
       <button>Fav</button>
-      <button>Buy</button>
+      <NavLink to={`/checkout/${id}`}>
+          <div className="navLinks">Buy</div>
+        </NavLink>
     </div>
   );
 };

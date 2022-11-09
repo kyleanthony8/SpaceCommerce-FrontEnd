@@ -1,53 +1,73 @@
 import "./NavBar.css";
 import Logo from "../../assets/logo.png";
+import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { signOut, deleteUser } from "../../services/user";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 function NavBar() {
-  const { dispatch } = useAuthContext()
-  let navigate = useNavigate();
+  const { dispatch } = useAuthContext();
+  const [toggle, setToggle] = useState(false);
+  const { user } = useAuthContext();
+  const navigate = useNavigate();
 
   const SignOut = () => {
-    signOut()
-    dispatch({ type: 'LOGOUT' })
+    signOut();
+    dispatch({ type: "LOGOUT" });
     navigate("/", { replace: true });
-  }
+  };
 
   const DeleteUser = () => {
-    deleteUser()
-    dispatch({ type: 'LOGOUT' })
+    deleteUser();
+    dispatch({ type: "LOGOUT" });
     navigate("/", { replace: true });
-  }
-  
+  };
+
+  const showMore = () => {
+    !toggle ? setToggle(true) : setToggle(false);
+  };
+
   return (
     <nav>
       <NavLink to="/">
         <img src={Logo} alt="hoobank" className="home" />
       </NavLink>
       <div className="right">
-        <button onClick={SignOut}>Sign Out</button>
-
-        <button onClick={DeleteUser}>delete User</button>
-        <NavLink to="/signIn">
-          <div className="navLinks">Sign In</div>
-        </NavLink>
-        <NavLink to="/SignUp">
-          <div className="navLinks">Sign Up</div>
-        </NavLink>
         <NavLink to="/createListing">
           <div className="navLinks">Create Listing</div>
         </NavLink>
         <NavLink to="/allListing">
           <div className="navLinks">All Listing</div>
         </NavLink>
-        <NavLink to="/account/">
-          <div className="navLinks">Account</div>
-        </NavLink>
+        <button className="navLinks" onClick={showMore}>
+          Account
+        </button>
+        {toggle && (
+          <div className="more">
+            {!user ? (
+              <div>
+                <NavLink to="/signIn">
+                  <div className="navLinks">Sign In</div>
+                </NavLink>
+                <NavLink to="/SignUp">
+                  <div className="navLinks">Sign Up</div>
+                </NavLink>
+              </div>
+            ) : (
+              <div>
+                <button className="navLinks" onClick={SignOut}>
+                  Sign Out
+                </button>
+                <NavLink to="/account/">
+                  <div className="navLinks">User Profile</div>
+                </NavLink>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );
 }
 
 export default NavBar;
-
