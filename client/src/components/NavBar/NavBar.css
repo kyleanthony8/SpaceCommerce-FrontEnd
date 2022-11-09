@@ -5,16 +5,19 @@ nav {
   top: 0;
   background-color: rgba(45, 45, 45, 1);
   justify-content: space-between;
+  z-index: 999;
 }
 
 .right {
   display: flex;
+  z-index: 999;
 }
 
 .navLinks {
   color: #e9e3d5;
   padding: 1rem 1rem 0.1rem 1rem;
   text-transform: uppercase;
+  z-index: 999;
 }
 
 .more {
@@ -30,3 +33,7 @@ nav {
 nav > a {
   text-decoration: none;
  }
+
+.options {
+  z-index: 999;
+}
