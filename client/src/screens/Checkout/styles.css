@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700");
 
 body {
-  background:#11101d;
+  background: #11101d;
   width: 100%;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 2px;
 }
 
@@ -26,20 +26,18 @@ body {
   height: 600px;
 }
 
-.item-image-src{
+.item-image-src {
   width: 400px !important;
   height: 400px !important;
 }
 
 .item-image {
-  position: absolute;
   z-index: 1;
 }
 
 .item-details {
   align-items: center;
   justify-content: center;
-  position: absolute;
   bottom: 40px;
   margin-bottom: 15px;
   padding-left: 90px;
@@ -56,7 +54,7 @@ body {
 .item-price {
   font-size: 25px;
   font-weight: 700;
-  color: #33BBCF;
+  color: #33bbcf;
 }
 
 .checkout {
@@ -111,22 +109,22 @@ body {
 }
 
 /* Removes form Controls  */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
-input[type=month]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    display: none;
+input[type="month"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  display: none;
 }
 
-input[type=month]::-webkit-calendar-picker-indicator {
-    -webkit-appearance: none;
-    display: none;
+input[type="month"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  display: none;
 }
 
 .apple-pay-btn {
@@ -155,7 +153,15 @@ input[type=month]::-webkit-calendar-picker-indicator {
 }
 
 .checkout-btn {
-  background: linear-gradient( 157.81deg, #def9fa -43.27%, #bef3f5 -21.24%, #9dedf0 12.19%, #7de7eb 29.82%, #5ce1e6 51.94%, #33bbcf 90.29% );
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   border: 0;
   border-radius: 5px;
@@ -169,4 +175,14 @@ input[type=month]::-webkit-calendar-picker-indicator {
   text-shadow: 0px 2px rgba(0, 0, 0, 0.2);
   letter-spacing: 1.5px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+  .product-col {
+    height: 55vh;
+  }
+
+  .app-container {
+    flex-wrap: wrap;
+  }
 }
