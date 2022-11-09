@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
-
 .sign-up {
   position: fixed;
   display: flex;
@@ -14,12 +12,23 @@
   margin: 5% auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:baseline;
   align-items: center;
   width: 60vw;
   height: 80vh;
   background: #2f2c33;
   color: white;
+}
+
+.sign-up-title {
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  font-size:x-large;
+}
+
+.sign-up-description {
+  padding-bottom: 40px;
 }
 
 input[type=text], select {
@@ -30,6 +39,7 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color:#2f2c33;
 }
 
 input[type=password], select {
@@ -40,6 +50,7 @@ input[type=password], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color:#2f2c33;
 }
 
 input[type=email], select {
@@ -50,19 +61,14 @@ input[type=email], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color:#2f2c33;
 }
 
 .submit-button {
   width: 70%;
-  background-color: #4CAF50;
   color: white;
-  padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.submit-button:hover {
-  background-color: #45a049;
 }
