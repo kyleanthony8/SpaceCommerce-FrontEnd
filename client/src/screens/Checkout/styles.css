@@ -73,13 +73,13 @@ body {
 }
 
 .input input {
-  width: 100%;
-  padding: 5px 10px;
+  width: 100% !important;
+  padding: 5px 10px !important;
   color: white;
   letter-spacing: 0px;
   font-size: 14px;
   background: 0;
-  border: 0;
+  border: 0 !important;
 }
 
 .input input:focus {
@@ -144,7 +144,7 @@ input[type=month]::-webkit-calendar-picker-indicator {
 }
 
 .checkout-btn {
-  background: linear-gradient(0deg, grey, grey);
+  background: linear-gradient( 157.81deg, #def9fa -43.27%, #bef3f5 -21.24%, #9dedf0 12.19%, #7de7eb 29.82%, #5ce1e6 51.94%, #33bbcf 90.29% );
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   border: 0;
   border-radius: 5px;
