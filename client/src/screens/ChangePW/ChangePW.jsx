@@ -20,7 +20,7 @@ const ChangePW = () => {
       }
     };
     checkSignIn();
-  }, [user]);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,11 +37,14 @@ const ChangePW = () => {
         };
         await changePassword(user._id, form);
         dispatch({ type: "LOGOUT" });
+        navigate("/", { replace: true });
       } catch (error) {
         console.error(error);
       }
     }
   };
+
+  if (!user) return <h1>Loading...</h1>;
 
   return (
     <form onSubmit={handleSubmit}>
