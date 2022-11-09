@@ -1,36 +1,100 @@
 .profile {
+  height: 90%;
+  background-color: rgb(0, 0, 0);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  gap: 5rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  background: rgb(6, 49, 178);
-  width: 100%;
-  height: calc(100vh - 2.5rem);
+  align-items: center;
+  border-radius: 3px;
 }
 
+
 .profileCore {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  opacity: 0.9;
   display: flex;
-  margin: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  background: rgb(42, 42, 42);
-  padding: 1rem;
-  gap: 1rem;
+  height: 70vh;
+  background-color: rgb(41, 37, 37);
+  color: rgb(255, 255, 255);
+  border:2px;
+  border-color: aqua;
+  border-style: solid;
+  border-radius: 5px;
 }
 
 .myList {
+  opacity: 0.9;
   display: flex;
-  margin: 2rem;
-  width: 50%;
-  background: rgb(42, 42, 42);
-  padding: 1rem;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 40vh;
+  background-color: rgb(41, 37, 37);
+  color: rgb(255, 255, 255);
+  border:2px;
+  border-color: aqua;
+  border-style: solid;
+  border-radius: 5px;
 }
 
 .image {
   background: rgb(178, 95, 6);
-  width: 30rem;
-  height: 20rem;
+  width: 14rem;
+  height: 16rem;
+  border:2px;
 }
 
 .description {
-  background: rgb(178, 95, 6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(41, 37, 37);
   width: 100%;
+  height: 30vh;
+  border-radius: 3px;
+}
+
+.userName {
+  font-size: x-large;
+  padding-top: 20px;
+}
+
+.bioHeader {
+  font-size: large;
+  padding-top: 20px;
+}
+
+.bioText {
+  font-size: small;
+  padding-left: 20px;
+}
+
+.emailAddress {
+  padding-top: 70px;
+}
+
+.changePass {
+  background: linear-gradient(0deg, grey, grey);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  border: 0;
+  border-radius: 5px;
+  width: 70%;
+  height: 40px;
+  margin-top: 50px;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1.5px;
+  cursor: pointer;
 }

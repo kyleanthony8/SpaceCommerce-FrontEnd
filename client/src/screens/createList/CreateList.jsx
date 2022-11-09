@@ -2,7 +2,9 @@ import "./CreateList.css";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { createSpaceItem } from "../../services/spaceItem.js";
+import "../createList/images/logo.png"
 import { useAuthContext } from "../../hooks/useAuthContext";
+
 
 function CreateList() {
   const nameRef = useRef();
@@ -40,35 +42,40 @@ function CreateList() {
   return (
     <div className="createList">
       <div className="center">
-        <h1>Create Listing</h1>
+        <h1 className="header">Create Listing</h1>
         <p>Input listing information below</p>
-        <form onSubmit={handleSubmit}>
-          <input
-            ref={nameRef}
-            type="text"
-            name="name"
-            placeholder=" Planet-X"
-          />
-          <input
-            ref={typeRef}
-            type="text"
-            name="name"
-            placeholder=" Gas Giant"
-          />
-          <input ref={sizeRef} type="text" name="name" placeholder=" Large" />
-          <input
-            ref={priceRef}
-            type="number"
-            name="name"
-            placeholder=" 1,000,000"
-          />
-          <input
-            ref={locationRef}
-            type="text"
-            name="name"
-            placeholder=" Milky Way"
-          />
-          <input ref={isHabRef} type="text" name="name" placeholder=" false" />
+        <form className="inputField" onSubmit={handleSubmit}>
+            <input 
+              ref={nameRef}
+              type="text"
+              name="name"
+              placeholder=" Planet-X"
+            />
+            <input
+              ref={typeRef}
+              type="text"
+              name="name"
+              placeholder=" Gas Giant"
+            />
+            <input ref={sizeRef} type="text" name="name" placeholder=" Large" />
+            <input
+              ref={priceRef}
+              type="number"
+              name="name"
+              placeholder=" 1,000,000"
+            />
+            <input
+              ref={locationRef}
+              type="text"
+              name="name"
+              placeholder=" Milky Way"
+            />
+            <input
+              ref={isHabRef}
+              type="text"
+              name="name"
+              placeholder=" false"
+            />
           {/* <input
             type="text"
             name="name"
