@@ -2,16 +2,16 @@
 
 body {
   background:#11101d;
-  width: 100rem;
+  width: 100%;
   font-family: 'Raleway', sans-serif;
-  letter-spacing: 0rem;
+  letter-spacing: 0.125rem;
 }
 
 .heading-3 {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.625rem;
   font-weight: 700;
-  padding-bottom: 2rem;
+  padding-bottom: 1.25rem;
 }
 
 .app-container {
@@ -19,16 +19,16 @@ body {
   margin: 5% auto;
   width: 60vw;
   height: 80vh;
-  box-shadow: 2rem 2rem 50rem rgb(60, 179, 113);
+  box-shadow: 0rem 0rem 3.125rem rgb(97,221,186);
 }
 
 .item-container .item-image {
-  height: 600px;
+  height: 37.5rem;
 }
 
 .item-image-src{
-  width: 400px !important;
-  height: 400px !important;
+  width: 25rem !important;
+  height: 25rem !important;
 }
 
 .item-image {
@@ -40,21 +40,21 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 40px;
-  margin-bottom: 15px;
-  padding-left: 90px;
+  bottom: 2.5px;
+  margin-bottom: 0.9375rem;
+  padding-left: 5.625rem;
   /* margin-left: 20px; */
 }
 
 .item-name {
   color: white;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 1.5625rem;
+  font-weight: 700rem;
   text-transform: uppercase;
 }
 
 .item-price {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: 700;
   color: #33BBCF;
 }
@@ -63,19 +63,19 @@ body {
   height: 80vh;
   background: #2f2c33;
   color: white;
-  padding: 35px 25px;
+  padding: 2.1875rem 1.5625rem;
 }
 
 .checkout-container {
-  padding: 35px 25px;
+  padding: 2.1875rem 1.5625rem;
 }
 
 .input {
-  padding: 5px 0;
+  padding: 0.3125rem 0rem;
 }
 
 .input label {
-  font-size: 8px;
+  font-size: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #78757c;
@@ -83,10 +83,10 @@ body {
 
 .input input {
   width: 100% !important;
-  padding: 5px 10px !important;
+  padding: 0.315rem 0.625rem !important;
   color: white;
-  letter-spacing: 0px;
-  font-size: 14px;
+  letter-spacing: 0rem;
+  font-size: 0.875rem;
   background: 0;
   border: 0 !important;
 }
@@ -96,18 +96,18 @@ body {
 }
 
 .input-field {
-  border: 1px solid #78757c;
-  border-radius: 5px;
+  border: 0.0625rem solid #78757c;
+  border-radius: 0.3125rem;
   position: relative;
 }
 
 .input-field img {
-  width: 25px;
+  width: 1.5625rem;
   height: auto;
   position: absolute;
   right: 0;
-  top: 5px;
-  margin-right: 5px;
+  top: 0.3125rem;
+  margin-right: 0.3125rem;
 }
 
 /* Removes form Controls  */
@@ -132,15 +132,15 @@ input[type=month]::-webkit-calendar-picker-indicator {
 .apple-pay-btn {
   background-color: black;
   width: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .crypto-btn {
   background-color: blue;
   width: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .product-col {
@@ -156,17 +156,17 @@ input[type=month]::-webkit-calendar-picker-indicator {
 
 .checkout-btn {
   background: linear-gradient( 157.81deg, #def9fa -43.27%, #bef3f5 -21.24%, #9dedf0 12.19%, #7de7eb 29.82%, #5ce1e6 51.94%, #33bbcf 90.29% );
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 0.0625rem 0.625rem rgba(0, 0, 0, 0.2);
   border: 0;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   width: 100%;
-  height: 40px;
-  margin-top: 50px;
+  height: 2.5rem;
+  margin-top: 3.125rem;
   color: black;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
-  text-shadow: 0px 2px rgba(0, 0, 0, 0.2);
-  letter-spacing: 1.5px;
+  text-shadow: 0rem 0.125rem rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.09375rem;
   cursor: pointer;
 }
