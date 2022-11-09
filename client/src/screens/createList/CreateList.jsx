@@ -2,9 +2,8 @@ import "./CreateList.css";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { createSpaceItem } from "../../services/spaceItem.js";
-import "../createList/images/logo.png"
+import "../createList/images/logo.png";
 import { useAuthContext } from "../../hooks/useAuthContext";
-
 
 function CreateList() {
   const nameRef = useRef();
@@ -45,42 +44,53 @@ function CreateList() {
         <h1 className="header">Create Listing</h1>
         <p>Input listing information below</p>
         <form className="inputField" onSubmit={handleSubmit}>
-            <input 
-              ref={nameRef}
-              type="text"
-              name="name"
-              placeholder=" Planet-X"
-            />
-            <input
-              ref={typeRef}
-              type="text"
-              name="name"
-              placeholder=" Gas Giant"
-            />
-            <input ref={sizeRef} type="text" name="name" placeholder=" Large" />
-            <input
-              ref={priceRef}
-              type="number"
-              name="name"
-              placeholder=" 1,000,000"
-            />
-            <input
-              ref={locationRef}
-              type="text"
-              name="name"
-              placeholder=" Milky Way"
-            />
-            <input
-              ref={isHabRef}
-              type="text"
-              name="name"
-              placeholder=" false"
-            />
-          {/* <input
+          <input
+            ref={nameRef}
             type="text"
             name="name"
-            placeholder=" URL Link"
-          /> */}
+            placeholder=" Planet-X"
+          />
+          <select ref={typeRef}>
+          <option value="Continental">Continental</option>
+            <option value="Ocean">Ocean</option>
+            <option value="Barren">Barren</option>
+            <option value="Tropical">Tropical</option>
+            <option value="Desert">Desert</option>
+            <option value="Arid">Ocean</option>
+            <option value="Arctic">Barren</option>
+            <option value="Alpine">Tropical</option>
+            <option value="Star">Desert</option>
+            <option value="Station">Station</option>
+            <option value="Ship">Ship</option>
+            <option value="GasPlanet">Gas Planet</option>
+            <option value="Astroid">Astroid</option>
+            <option value="Specialty">Specialty</option>
+            <option value="Colony">Colony</option>
+            <option value="Moon">Moon</option>
+          </select>
+          <select ref={sizeRef}>
+            <option value="Tiny">Tiny</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="Giant">Giant</option>
+          </select>
+          <input
+            ref={priceRef}
+            type="number"
+            name="name"
+            placeholder=" 1,000,000"
+          />
+          <input
+            ref={locationRef}
+            type="text"
+            name="name"
+            placeholder=" Milky Way"
+          />
+          <select ref={isHabRef} name="name">
+            <option value="true">true</option>
+            <option value="false">false</option>
+          </select>
           <button id="createListing">Submit Listing</button>
         </form>
       </div>
