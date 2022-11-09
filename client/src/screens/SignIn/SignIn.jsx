@@ -9,7 +9,7 @@ function SignIn() {
   const { dispatch } = useAuthContext();
   const usernameRef = useRef();
   const passwordRef = useRef();
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const { user } = useAuthContext();
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function SignIn() {
       }
     };
     checkSignIn();
-  }, []);
+  }, [user]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +34,6 @@ function SignIn() {
         alert("Invalid Username or password");
 
       } else {
-        console.log(user)
         dispatch({ type: "LOGIN", payload: user });
         navigate("/", { replace: true });
       }
