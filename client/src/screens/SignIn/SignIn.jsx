@@ -9,7 +9,7 @@ function SignIn() {
   const { dispatch } = useAuthContext();
   const usernameRef = useRef();
   const passwordRef = useRef();
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const { user } = useAuthContext();
 
   useEffect(() => {
@@ -29,8 +29,10 @@ function SignIn() {
         password: passwordRef.current.value,
       };
       const user = await signIn(form);
-      if (user.username === "Error") {
-        alert("Invalid");
+
+      if (user.name === "AxiosError") {
+        alert("Invalid Username or password");
+
       } else {
         dispatch({ type: "LOGIN", payload: user });
         navigate("/", { replace: true });

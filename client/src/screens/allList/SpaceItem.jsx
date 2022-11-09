@@ -61,11 +61,14 @@ const SpaceItem = () => {
     changeNumber();
   }, []);
 
+  if (!Object.keys(items).length) return <h1>Loading...</h1>;
+
   return (
     <div className="cont">
       {toggle && (
         <input
           className="search"
+          placeholder="Search..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           type="search"

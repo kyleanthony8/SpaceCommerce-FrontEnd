@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSpaceItem } from "../../services/spaceItem.js";
-import { NavLink, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "./Singlelisting.css";
 
 const Singlelisting = () => {
@@ -39,9 +39,7 @@ const Singlelisting = () => {
             <h2 className="listing-item-h2">{item.name}</h2>
             <h3 className="listing-item-h3">{item.price} BTC</h3>
             <p className="listing-item-p">{item.location}</p>
-            {/* <NavLink to={`/checkout/${id}`}>
-          <div className="buy-btn">Buy</div>
-        </NavLink> */}
+            <p className="listing-item-p">Current Owner: {item.owner.username}</p>
             <button className="buy-btn" onClick={handleOnSubmit}>
               Buy
             </button>
