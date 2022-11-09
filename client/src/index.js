@@ -4,16 +4,15 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-// import store from "./app/store.js";
-// import { Provider } from "react-redux";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { AuthContextProvider } from "./context/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
-    <React.StrictMode>
+    <AuthContextProvider>
       <App />
-      </React.StrictMode>
+    </AuthContextProvider>
   </Router>
 );
 

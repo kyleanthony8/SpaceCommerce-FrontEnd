@@ -6,9 +6,7 @@ nav {
   background-color: rgba(45, 45, 45, 1);
   justify-content: space-between;
 }
-.middle {
-  position: absolute;
-}
+
 .right {
   display: flex;
 }
@@ -19,7 +17,12 @@ nav {
   text-transform: uppercase;
 }
 
+.more {
+  top: 10rem
+}
 .home  {
+  height: 5rem;
+  width: 5rem;
   justify-self: left;
   align-self: left;
 }

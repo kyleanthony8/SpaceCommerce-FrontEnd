@@ -1,22 +1,70 @@
 import "./NavBar.css";
-import { NavLink } from "react-router-dom";
+import Logo from "../../assets/logo.png";
+import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { signOut, deleteUser } from "../../services/user";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 function NavBar() {
+  const { dispatch } = useAuthContext();
+  const [toggle, setToggle] = useState(false);
+  const { user } = useAuthContext();
+  const navigate = useNavigate();
+
+  const SignOut = () => {
+    signOut();
+    dispatch({ type: "LOGOUT" });
+    navigate("/", { replace: true });
+  };
+
+  const DeleteUser = () => {
+    deleteUser();
+    dispatch({ type: "LOGOUT" });
+    navigate("/", { replace: true });
+  };
+
+  const showMore = () => {
+    !toggle ? setToggle(true) : setToggle(false);
+  };
+
   return (
     <nav>
       <NavLink to="/">
-        <div className="navLinks home">Home</div>
-      </NavLink>
-      <NavLink to="/search">
-        <div className="navLinks middle">Search</div>
+        <img src={Logo} alt="hoobank" className="home" />
       </NavLink>
       <div className="right">
         <NavLink to="/createListing">
           <div className="navLinks">Create Listing</div>
         </NavLink>
-        <NavLink to="/account">
-          <div className="navLinks">Account</div>
+        <NavLink to="/allListing">
+          <div className="navLinks">All Listing</div>
         </NavLink>
+        <button className="navLinks" onClick={showMore}>
+          Account
+        </button>
+        {toggle && (
+          <div className="more">
+            {!user ? (
+              <div>
+                <NavLink to="/signIn">
+                  <div className="navLinks">Sign In</div>
+                </NavLink>
+                <NavLink to="/SignUp">
+                  <div className="navLinks">Sign Up</div>
+                </NavLink>
+              </div>
+            ) : (
+              <div>
+                <button className="navLinks" onClick={SignOut}>
+                  Sign Out
+                </button>
+                <NavLink to="/account/">
+                  <div className="navLinks">User Profile</div>
+                </NavLink>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );

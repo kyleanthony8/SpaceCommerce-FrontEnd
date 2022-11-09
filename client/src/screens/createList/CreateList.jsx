@@ -3,6 +3,8 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { createSpaceItem } from "../../services/spaceItem.js";
 import "../createList/images/logo.png"
+import { useAuthContext } from "../../hooks/useAuthContext";
+
 
 function CreateList() {
   const nameRef = useRef();
@@ -12,24 +14,29 @@ function CreateList() {
   const locationRef = useRef();
   const isHabRef = useRef();
   let navigate = useNavigate();
+  const { user } = useAuthContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const listing = {
-        name: nameRef.current.value,
-        type: typeRef.current.value,
-        size: sizeRef.current.value,
-        price: priceRef.current.value,
-        location: locationRef.current.value,
-        rating: 0,
-        isBought: false,
-        isHab: isHabRef.current.value,
-      };
-      const item = await createSpaceItem(listing);
-      console.log(item);
-    } catch (error) {
-      console.error(error);
+    if (!user) {
+      navigate("/signIn", { replace: true });
+    } else {
+      try {
+        const listing = {
+          name: nameRef.current.value,
+          type: typeRef.current.value,
+          size: sizeRef.current.value,
+          price: priceRef.current.value,
+          location: locationRef.current.value,
+          image: ["636bb1f197753db232ec31c5"],
+          rating: 0,
+          isHab: isHabRef.current.value,
+        };
+        const item = await createSpaceItem(listing);
+        console.log(item);
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
   return (

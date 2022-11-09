@@ -5,7 +5,7 @@
 **Netlify:** 
 
 ## Overview
-Users may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. Users may purchase a celestital object, sell a celestital object, create a User Profile Account, chat with satisfied buyers, and contact staff. 
+MySpace is reborn. The intergalactic junk of the universe; planets, celestial bodies, space craft, anything interstellar has a price tag. Users of MySpace can buy and sell various listings including planets, and other space craft. Users can register by creating an Account, navigate various listings, and purchase a listing, in addition to creating for sale listings of their own.
 
 ## Team Members
 Danny Yu, Kyle Anthony, Connor Harris, Jacob Csonka, and Andrea Alonso

@@ -1,13 +1,18 @@
 import React from "react";
 import styles from "../../style";
-import { Navbar, Card, Filter, Footer, Hero, Body } from "../../components";
+import {
+  Navbar,
+  Card,
+  Filter,
+  Footer,
+  Hero,
+  Homecards,
+} from "../../components";
 
 const Home = () => (
   <div className="bg-primary w-full overflow-hidden">
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
-      </div>
+      <div className={`${styles.boxWidth}`}></div>
     </div>
 
     <div className={`bg-primary ${styles.flexStart}`}>
@@ -18,9 +23,7 @@ const Home = () => (
 
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        <Filter />
-        <Body />
-        <p className="heading2" Body goes here />
+        <Homecards />
         <Footer />
       </div>
     </div>
