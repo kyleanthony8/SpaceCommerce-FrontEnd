@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllUsers, signUp } from "../../services/user";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import styles from "../../style";
 
 const SignUp = () => {
   const { dispatch } = useAuthContext();
@@ -55,8 +56,8 @@ const SignUp = () => {
     <form onSubmit={handleSubmit}>
       <div className="sign-up">
         <div className="sign-up-center">
-          <h1>Sign Up</h1>
-          <p>Please complete all Information below:</p>
+          <h1 className="sign-up-title">Sign Up</h1>
+          <p className="sign-up-description">Please complete all Information below:</p>
           <input
             type="text"
             placeholder="Enter Username"
@@ -84,7 +85,7 @@ const SignUp = () => {
             name="email"
             ref={emailRef}
           />
-          <button type="submit">Create Account</button>
+          <button className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`} type="submit">Create Account</button>
         </div>
       </div>
     </form>
