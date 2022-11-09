@@ -45,7 +45,7 @@ function NavBar() {
         {toggle && (
           <div className="more">
             {!user ? (
-              <div>
+              <div className="options">
                 <NavLink to="/signIn">
                   <div className="navLinks">Sign In</div>
                 </NavLink>
@@ -54,7 +54,7 @@ function NavBar() {
                 </NavLink>
               </div>
             ) : (
-              <div>
+              <div className="options">
                 <button className="navLinks" onClick={SignOut}>
                   Sign Out
                 </button>
