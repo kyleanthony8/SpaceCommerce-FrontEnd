@@ -3,7 +3,7 @@
 **Github Repo:** https://github.com/DannyYu728/SpaceCommerce-Backend
                  https://github.com/kyleanthony8/SpaceCommerce-FrontEnd
 
-**Netlify:** https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/
+**Netlify:** https://spacecommerce.netlify.app/
 
 ## Overview
 MySpace is reborn. The intergalactic junk of the universe; planets, celestial bodies, space craft, anything interstellar has a price tag. Users of MySpace can buy and sell various listings including planets, and other space craft. Users can register by creating an Account, navigate various listings, and purchase a listing, in addition to creating for sale listings of their own.
