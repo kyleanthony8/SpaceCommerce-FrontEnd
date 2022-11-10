@@ -177,12 +177,28 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .product-col {
-    height: 55vh;
+    height: 70vh;
+  }
+
+  .item-image {
+    height: 55vh !important;
+  }
+
+  .item-image-src {
+    height: 55vh !important;
   }
 
   .app-container {
     flex-wrap: wrap;
+  }
+
+  .no-gutters {
+    height: 140vh !important;
+  }
+
+  .checkout {
+    height: 140vh !important;
   }
 }
