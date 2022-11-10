@@ -28,8 +28,8 @@ const Singlelisting = () => {
     <div className="listing-container">
       <div className="listing-image">
         <div className="item-container">
-          <div className="item-image">
-            <img src={item.image[0].image} />
+          <div className="single-listing-item-image">
+            <img className="single-listing-img" src={item.image[0].image} />
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ const Singlelisting = () => {
             <p className="listing-item-p">{item.location}</p>
             <p className="listing-item-p">Current Owner: {item.owner.username}</p>
             <button className="buy-btn" onClick={handleOnSubmit}>
-              Buy
+              Purchase
             </button>
           </div>
         </div>
