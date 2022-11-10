@@ -193,6 +193,7 @@ input[type="month"]::-webkit-calendar-picker-indicator {
 
   .app-container {
     flex-wrap: wrap;
+    box-shadow: none;
   }
 
   .no-gutters {
