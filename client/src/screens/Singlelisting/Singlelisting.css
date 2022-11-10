@@ -1,0 +1,134 @@
+.listing-container {
+  display: flex;
+  margin: 5% auto;
+  width: 62.5rem;
+  height: 37.5rem;
+  box-shadow: 0rem 0rem 3.125rem rgba(254, 12, 12, 0.5);
+  animation: shadowAnimation 4s alternate infinite;
+}
+
+.listing-image {
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  
+}
+
+.listing-item-h2, .listing-item-h3, .listing-item-p {
+  text-shadow: 3px 3px 8px rgba(254, 12, 12, 1);
+  animation: textShadow 4s alternate infinite;
+}
+
+.listing-item-h2 {
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+
+.listing-item-h3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  
+}
+
+.listing-item-p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.listing {
+  width: 50%;
+  align-items: center;
+  padding-bottom: 1rem;
+  font-size: x-large;
+  height: 37.5rem;
+  
+}
+.listing-details {
+  height: inherit;
+  background: black;
+  color: white;
+}
+
+.listing-details-container {
+  padding: 2.1875rem 1.5625rem;
+  height: 100%;
+}
+
+.item-container {
+  height: 100% !important;
+  /* height: 31.25rem !important; */
+  width: 100% !important;
+  
+}
+
+.single-listing-img {
+  height: 31.25rem;
+  width: 31.25rem;
+  border-radius: 20px !important;
+}
+
+.single-listing-item-image {
+  /* position: absolute; */
+  z-index: 1;
+}
+
+.buy-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+  box-shadow: 0rem 0.0625rem 0.625rem rgba(0, 0, 0, 0.2);
+  border: 0;
+  border-radius: 0.3125rem;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 5rem;
+  color: rgb(45, 45, 45);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0rem 0.125rem rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  letter-spacing: 0.09375rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.buy-btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-1px);
+}
+
+.buy-btn:active {
+  box-shadow: #1464e4 0 3px 7px inset;
+  transform: translateY(1px);
+}
+
+@keyframes shadowAnimation {
+	0% { box-shadow: 0rem 0rem 3.125rem rgba(12, 105, 254, 0.5); }
+	50% { box-shadow: 0rem 0rem 3.125rem rgba(12, 254, 52, 0.5); }
+	100% { box-shadow: 0rem 0rem 3.125rem rgba(254, 12, 12, 0.5); }
+}
+
+@keyframes textShadow {
+	0% { text-shadow: 2px 2px 5px rgba(12, 105, 254, 1); }
+	50% { text-shadow: 2px 2px 5px rgba(12, 254, 52, 1); }
+	100% { text-shadow: 2px 2px 5px rgba(254, 12, 12, 1); }
+}
+
+@media only screen and (max-width: 1000px) {
+  .listing-container {
+   display: grid;
+  }
+}

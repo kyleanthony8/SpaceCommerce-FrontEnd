@@ -34,7 +34,7 @@ export const verifyUser = async () => {
 
 export const changePassword = async (credentials, data) => {
   try {
-    const resp = await api.put(`/changePassword/id/${credentials}`, data);
+    const resp = await api.put(`/users/changePassword/${credentials}`, data);
     return resp.data;
   } catch (error) {
     throw error;
@@ -50,6 +50,7 @@ export const signOut = async () => {
   }
 };
 
+//for Dev purposes
 export const getAllUsers = async () => {
   try {
     const resp = await api.get("/users");
@@ -70,6 +71,7 @@ export const getUser = async (id) => {
   }
 };
 
+//for Dev purposes
 export const getUsername = async (name) => {
   try {
     const resp = await api.get(`/users/username/${name}`);
@@ -81,6 +83,7 @@ export const getUsername = async (name) => {
   }
 };
 
+//for Dev purposes
 export const updateUser = async (credentials, data) => {
   try {
     const resp = await api.put(`/users/id/${credentials}`, data);
@@ -93,6 +96,7 @@ export const updateUser = async (credentials, data) => {
 export const deleteUser = async (credentials) => {
   try {
     const resp = await api.delete(`/users/id/${credentials}`);
+    localStorage.removeItem("token");
     return resp.data;
   } catch (error) {
     throw error;

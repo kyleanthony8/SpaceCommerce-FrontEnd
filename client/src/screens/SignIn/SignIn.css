@@ -1,21 +1,168 @@
 .signIn {
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(45, 45, 45, 0.9);
 }
 
-.signInCenter {
+.signForm {
+  z-index: 500;
+  background: rgba(45, 45, 45, 0.7);
+  width: 30vw;
+  height: 20vh;
+  border: 1px solid grey;
+  gap: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 80vh;
-  border-radius: 10%;
-  background-color: rgba(45, 45, 45, 1);
-  color: whitesmoke;
+  margin-top: 10%;
+  border-radius: 5%;
+}
+
+.input[type="text"],
+.input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.input[type="submit"]:hover {
+  background: #6cf0c2;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+
+.input {
+  padding: 5px 0;
+}
+
+.input label {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #78757c;
+}
+
+.input {
+  width: 100%;
+  padding: 5px 10px;
+  color: white;
+  letter-spacing: 0px;
+  font-size: 14px;
+  background: 0;
+  border: 1;
+}
+
+.input :focus {
+  outline: 0;
+}
+
+.input-field {
+  border: 1px solid #78757c;
+  border-radius: 5px;
+  position: relative;
+}
+
+.input-field img {
+  width: 25px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  margin-right: 5px;
+}
+
+
+
+@keyframes move-background {
+  from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+.stars {
+ background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: 0;
+}
+
+.twinkling{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+  animation:move-background 70s linear infinite;
+	
+}
+
+.clouds{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+  animation:move-background 150s linear infinite;
+}
+.moon {
+  height: 70vh;
+  width:70vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
 }

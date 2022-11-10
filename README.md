@@ -1,90 +1,20 @@
-# myspace
+# MySpace 
 
-**Github Repo:** 
+**Github Repo:** https://github.com/DannyYu728/SpaceCommerce-Backend
+                 https://github.com/kyleanthony8/SpaceCommerce-FrontEnd
 
-**Netlify:** 
+**Netlify:** https://spacecommerce.netlify.app/
 
 ## Overview
-Users may naviagte application to view listed celestital objects including planets, spaceships, stars, etc. Users may purchase a celestital object, sell a celestital onject, create a User Profile Account, chat with satisfied buyers, and contact staff. 
+MySpace is reborn. The intergalactic junk of the universe; planets, celestial bodies, space craft, anything interstellar has a price tag. Users of MySpace can buy and sell various listings including planets, and other space craft. Users can register by creating an Account, navigate various listings, and purchase a listing, in addition to creating for sale listings of their own.
 
 ## Team Members
 Danny Yu, Kyle Anthony, Connor Harris, Jacob Csonka, and Andrea Alonso
 
-## Data Schema
 
-User:
+## WireFrame
 
-```
-let UserData = new Schema(
-  {
-    username: { type: String, required: true, unique: true },
-    password_digest: { type: String, required: true, select: false },
-    email: { type: String, required: true, unique: true },
-    avatar: { type: String },
-    rating: { type: Number },
-    favoriteItems: [{ type: Schema.Types.ObjectId, ref: "spaceItems" }],
-    listing: [{ type: Schema.Types.ObjectId, ref: "spaceItems" }],
-  },
-  { timestamps: true }
-);
-
-```
-
-SpaceItem:
-
-```
-let SpaceItem = new Schema({
-  name: { type: String, required: true },
-  type: {
-    type: String,
-    required: true,
-    enum: [
-      "Continental",
-      "Ocean",
-      "Barren",
-      "Tropical",
-      "Desert",
-      "Arid",
-      "Arctic",
-      "Alpine",
-      "Star",
-      "Station",
-      "Ship",
-      "GasPlanet",
-      "Astroid",
-      "Specialty",
-      "Colony",
-      "Moon"
-    ],
-  },
-  size: {
-    type: String,
-    required: true,
-    enum: ["Tiny", "Small", "Medium", "Large", "Giant"],
-  },
-  price: { type: Number, required: true },
-  location: { type: String, required: true },
-  image: [{ type: Schema.Types.ObjectId, ref: "images" }],
-  owner: { type: Schema.Types.ObjectId, ref: "userDatas" },
-  rating: { type: Number },
-  isBought: { type: Boolean },
-  isHab: { type: Boolean },
-});
-
-```
-Image:
-
-```
-let Image = new Schema({
-  source: { type: Schema.Types.ObjectId, ref: 'userDatas' },
-  spaceItem: { type: Schema.Types.ObjectId, ref: 'spaceItems'},
-  image: { type: String },
-});
-
-```
-
-## Wireframes & Branding
-
+Please click on Wiki and WireFrame to view images. 
 
 
 ## Team Expectations
@@ -116,17 +46,20 @@ let Image = new Schema({
 | :-------- | :--------------------------------------------------------------------------------------------------  | :------: |
 | Nov 03    | Project Team Building                                                                                | Complete |
 | Nov 04    | Wireframes + Final Project Approval + Create and Deploy Back-End + React dependencies + plugins      | Complete |
-| Nov 05    | Front End Page Tasking                                                                               |          |
-| Nov 06    | Front End Page Tasking                                                                               |          |
-| Nov 07    | 95% completion of Front End page                                                                     |          |
-| Nov 08    | CSS Style Adjustments                                                                                |          |
-| Nov 09    | Final Edits                                                                                          |          |
-| Nov 10    | Project presentation                                                                                 |          |
+| Nov 05    | Front End Page Tasking                                                                               | Complete |
+| Nov 06    | Front End Page Tasking                                                                               | Complete |
+| Nov 07    | 95% completion of Front End page                                                                     | Complete |
+| Nov 08    | CSS Style Adjustments                                                                                | Complete |
+| Nov 09    | Final Edits                                                                                          | Complete |
+| Nov 10    | Project presentation                                                                                 | Complete |
                                                                                
 
 # License
 This project is licensed under the GNU General Public License v3.0.
 
 # Acknowledgements
-API used: https://spacecommerce.up.railway.app/
-API provided by: Danny Yu and Connor Harris
+[CSS Fonts](https://fonts.googleapis.com/css?family=Raleway:400,500,700)
+[Glowing Loader Ring](https://codepen.io/Curlmuhi/pen/ExKWXKO)
+[Animated Star Animation](https://codepen.io/riley-pearce/pen/OJWPjZM?fbclid=IwAR2HwzINeVhFg7-YQvFDV8Teh-IH6akXO9RY3uMTapRobDt-R9fJ6-GIMkY)
+[CSS Frame for Checkout](https://codepen.io/agoodwin/pen/NMJoER,https://orangeable.com/css/text-gradient,https://codepen.io/darrionr/pen/Xaqrzj)
+
