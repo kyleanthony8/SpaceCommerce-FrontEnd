@@ -202,3 +202,37 @@ input[type="month"]::-webkit-calendar-picker-indicator {
     height: 140vh !important;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .product-col {
+    height: 70vh;
+  }
+
+  .item-image {
+    height: 55vh !important;
+  }
+
+  .item-image-src {
+    height: 55vh !important;
+  }
+
+  .app-container {
+    flex-wrap: wrap;
+  }
+
+  .no-gutters {
+    height: 70vh !important;
+  }
+
+  .checkout {
+    height: 70vh !important;
+  }
+
+  .item-details{
+    text-align: left;
+    left: 0;
+    align-items: unset;
+    justify-content: left;
+    padding-left: 0;
+  }
+}
