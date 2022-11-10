@@ -1,0 +1,39 @@
+nav {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  top: 0;
+  
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.right {
+  display: flex;
+  z-index: 999;
+}
+
+.navLinks {
+  color: #e9e3d5;
+  padding: 2rem 1rem;
+  letter-spacing: 2px;
+  z-index: 999;
+}
+
+.more {
+  top: 10rem
+}
+.home  {
+  height: 5rem;
+  width: 5rem;
+  justify-self: left;
+  align-self: left;
+}
+
+nav > a {
+  text-decoration: none;
+ }
+
+.options {
+  z-index: 999;
+}
