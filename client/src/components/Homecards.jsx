@@ -9,10 +9,10 @@ const Homecards = () => {
     <div>
       <SpaceItem />
       <NavLink to="/allListing">
-      <div className={`ss:hidden ${styles.flexCenter}`}>
-        
-      </div>
-        <span className="text-gradient">See More Listings</span>
+        <div className={`ss:hidden ${styles.flexCenter}`}></div>
+        <div className="cont">
+          <span className="text-gradient">See More Listings</span>
+        </div>
       </NavLink>
     </div>
   );
