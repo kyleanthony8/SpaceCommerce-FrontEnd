@@ -64,12 +64,12 @@
 
 .single-listing-img {
   height: 31.25rem;
-  max-width: 31.25rem;
+  width: 31.25rem;
   border-radius: 20px !important;
 }
 
 .single-listing-item-image {
-  position: absolute;
+  /* position: absolute; */
   z-index: 1;
 }
 
@@ -125,4 +125,10 @@
 	0% { text-shadow: 2px 2px 5px rgba(12, 105, 254, 1); }
 	50% { text-shadow: 2px 2px 5px rgba(12, 254, 52, 1); }
 	100% { text-shadow: 2px 2px 5px rgba(254, 12, 12, 1); }
+}
+
+@media only screen and (max-width: 1000px) {
+  .listing-container {
+   display: grid;
+  }
 }
