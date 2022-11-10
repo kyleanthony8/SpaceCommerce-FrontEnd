@@ -11,7 +11,7 @@ MySpace is reborn. The intergalactic junk of the universe; planets, celestial bo
 ## Team Members
 Danny Yu, Kyle Anthony, Connor Harris, Jacob Csonka, and Andrea Alonso
 
-##WireFRaming
+## WireFrame
 Please click on Wiki and WireFrame to view images. 
 
 ## Team Expectations
