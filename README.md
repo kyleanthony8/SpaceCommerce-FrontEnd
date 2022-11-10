@@ -57,6 +57,7 @@ Danny Yu, Kyle Anthony, Connor Harris, Jacob Csonka, and Andrea Alonso
 This project is licensed under the GNU General Public License v3.0.
 
 # Acknowledgements
-API used: https://spacecommerce.up.railway.app/
-API provided by: Danny Yu and Connor Harris
-CSS Fonts URL: https://fonts.googleapis.com/css?family=Raleway:400,500,700
+[API used]("https://spacecommerce.up.railway.app/")
+[CSS Fonts]("https://fonts.googleapis.com/css?family=Raleway:400,500,700")
+[CSS Credit]("https://codepen.io/Curlmuhi/pen/ExKWXKO")("https://codepen.io/riley-pearce/pen/OJWPjZM?fbclid=IwAR2HwzINeVhFg7-YQvFDV8Teh-IH6akXO9RY3uMTapRobDt-R9fJ6-GIMkY")("https://codepen.io/agoodwin/pen/NMJoER")("https://orangeable.com/css/text-gradient")("https://codepen.io/darrionr/pen/Xaqrzj")
+
