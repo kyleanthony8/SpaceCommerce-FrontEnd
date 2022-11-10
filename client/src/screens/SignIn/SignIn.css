@@ -1,39 +1,22 @@
 .signIn {
-  
-  border: 2px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  margin-top: 10%;
+}
+
+.signForm {
+  z-index: 500;
+  background: rgba(45, 45, 45, 0.7);
   width: 30vw;
   height: 20vh;
-  background-color: rgba(45, 45, 45, 0.9);
-}
-
-
-.signInCenter {
+  border: 1px solid grey;
+  gap: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 80vh;
-  border-radius: 10%;
-  background-color: rgba(45, 45, 45, 1);
-  color: whitesmoke;
-}
-
-.app {
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-  height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: #f8f9fd;
+  margin-top: 10%;
+  border-radius: 5%;
 }
 
 .input[type="text"],
@@ -106,7 +89,7 @@
   letter-spacing: 0px;
   font-size: 14px;
   background: 0;
-  border: 0;
+  border: 1;
 }
 
 .input :focus {
@@ -126,4 +109,60 @@
   right: 0;
   top: 5px;
   margin-right: 5px;
+}
+
+
+
+@keyframes move-background {
+  from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+.stars {
+ background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: 0;
+}
+
+.twinkling{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+  animation:move-background 70s linear infinite;
+	
+}
+
+.clouds{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+  animation:move-background 150s linear infinite;
+}
+.moon {
+  height: 70vh;
+  width:70vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
 }

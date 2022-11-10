@@ -16,8 +16,10 @@
   align-items: center;
   width: 60vw;
   height: 80vh;
-  background: #2f2c33;
   color: white;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
 
 .sign-up-title {
@@ -25,10 +27,12 @@
   padding-top: 40px;
   padding-bottom: 80px;
   font-size:x-large;
+  text-shadow: 5px 5px 5px black;
 }
 
 .sign-up-description {
   padding-bottom: 40px;
+  text-shadow: 5px 5px 5px black;
 }
 
 input[type=text], select {
@@ -71,4 +75,16 @@ input[type=email], select {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

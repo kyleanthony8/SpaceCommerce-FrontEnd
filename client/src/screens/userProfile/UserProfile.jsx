@@ -32,11 +32,10 @@ function UserProfile() {
 
   if (!user) return <h1>Loading...</h1>;
 
-  // console.log(user.listing)
   return (
     <div className="profile">
       <div className="profileCore">
-        <img className="image" src={user.avatar} />
+        <img className="imagePro" src={user.avatar} />
         <div className="description">
           <h1 className="userName">{user.username}</h1>
           <h1 className="bioHeader">Bio</h1>

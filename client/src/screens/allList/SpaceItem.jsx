@@ -3,6 +3,7 @@ import ItemDisplay from "../../components/ItemDisplay.jsx";
 import { getSpaceItems } from "../../services/spaceItem.js";
 import { useLocation } from "react-router-dom";
 import "./allListings.css";
+import Loading from "../../components/Loading/Loading.js";
 
 const SpaceItem = () => {
   const [items, setItems] = useState([]);
@@ -12,6 +13,12 @@ const SpaceItem = () => {
   const inputRef = useRef();
   const path = useLocation();
   let num = 0;
+
+  const delay = (duration) => {
+    return new Promise((res) => {
+      setTimeout(res, duration);
+    });
+  };
 
   const spaceData = items.map((item) => {
     const space = {};
@@ -54,6 +61,7 @@ const SpaceItem = () => {
   useEffect(() => {
     const fetchItems = async () => {
       const allItems = await getSpaceItems();
+      await delay(1500)
       setItems(allItems);
       num = items.length;
     };
@@ -61,7 +69,7 @@ const SpaceItem = () => {
     changeNumber();
   }, []);
 
-  if (!Object.keys(items).length) return <h1>Loading...</h1>;
+  if (!Object.keys(items).length) return <Loading />;
 
   return (
     <div className="cont">
