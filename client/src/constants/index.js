@@ -43,7 +43,7 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "MySpace continually raises the bar on how .",
+      "MySpace continually raises the bar on interstellar trading.",
     name: "Connor",
     title: "Planet Collector",
     img: people01,
