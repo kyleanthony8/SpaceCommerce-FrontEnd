@@ -8,10 +8,14 @@
   max-height: 270px;
   border-radius: 16px;
   background: linear-gradient(144.39deg, #FFFFFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%);
+  animation: Slidedown 0.7s;
 }
 
 .Display:hover {
   transform: scale(1.05);
+  filter: brightness(2);
+  color: #37bed1;
+
 }
 .items {
   display: flex;
@@ -35,3 +39,7 @@ h3 {
 text-align: center;
 }
 
+@keyframes Slidedown {
+  from { transform: translateY(-1000px) scale(1);}
+    to {transform: translateY(0) scale(1);}
+}

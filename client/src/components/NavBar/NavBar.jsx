@@ -33,6 +33,7 @@ function NavBar() {
         <img src={Logo} alt="hoobank" className="home" />
       </NavLink>
       <div className="right">
+        <div className="navLinks nameColor">{user && `Hello, ${user.username}`}</div>
         <NavLink to="/createListing">
           <div className="navLinks">Create Listing</div>
         </NavLink>

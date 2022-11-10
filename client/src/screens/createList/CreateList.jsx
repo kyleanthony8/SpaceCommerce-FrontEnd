@@ -40,6 +40,10 @@ function CreateList() {
   };
   return (
     <div className="createList">
+              <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
       <div className="center">
         <h1 className="header">Create Listing</h1>
         <p>Input listing information below</p>
@@ -50,8 +54,10 @@ function CreateList() {
             name="name"
             placeholder=" Planet-X"
           />
-          <select classname="select" ref={typeRef}>
-          <option classname="dropdown" value="Continental">Continental</option>
+          <select className="select" ref={typeRef}>
+            <option className="dropdown" value="Continental">
+              Continental
+            </option>
             <option value="Ocean">Ocean</option>
             <option value="Barren">Barren</option>
             <option value="Tropical">Tropical</option>
@@ -91,7 +97,12 @@ function CreateList() {
             <option value="true">true</option>
             <option value="false">false</option>
           </select>
-          <button id="createListing">Submit Listing</button>
+          <button data-text="Awesome" class="button">
+            <span class="actual-text">&nbsp;Submit&nbsp;</span>
+            <span class="hover-text" aria-hidden="true">
+              &nbsp;Submit&nbsp;
+            </span>
+          </button>
         </form>
       </div>
     </div>
